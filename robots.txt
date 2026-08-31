@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://caulderoninteractive-creator.github.io/Caulderon-Interactive/sitemap.xml
