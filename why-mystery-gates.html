@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070B20">
+<meta name="description" content="Why Number Run: Pro Edition added a rare, reward-only gate modifier that rolls independently of every hazard, and why it stays deliberately rare.">
+<title>Why MYSTERY gates exist (and why they're rare on purpose) — Devlog</title>
+<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/why-mystery-gates.html">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Caulderon Interactive">
+<meta property="og:title" content="Why MYSTERY gates exist (and why they're rare on purpose)">
+<meta property="og:description" content="Why Number Run: Pro Edition added a rare, reward-only gate modifier that rolls independently of every hazard, and why it stays deliberately rare.">
+<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/why-mystery-gates.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why MYSTERY gates exist (and why they're rare on purpose)">
+<meta name="twitter:description" content="Why Number Run: Pro Edition added a rare, reward-only gate modifier that rolls independently of every hazard, and why it stays deliberately rare.">
+<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
+  <nav><a href="../index.html#game">Game</a><a href="../index.html#about">About</a><a href="index.html">Devlog</a><a href="../support.html">Support</a></nav>
+</header>
+<main class="legal devlog-post">
+<div class="label">DEVLOG · GAME DESIGN</div>
+<h1>Why MYSTERY gates exist (and why they're rare on purpose)</h1>
+<span class="devlog-date">12 AUGUST 2026</span>
+
+<p>Number Run: Pro Edition already had a full roster of gate modifiers — Frozen, Heat, Gravity Shift, Current, Snare, Volatile, Mirror, Toxic, Chaos. Every one of them is a hazard: something that makes the next few seconds harder in some specific, telegraphed way. MYSTERY is the odd one out. It's pure upside — either a small coin bonus or a brief cosmetic skin preview — and it's the only modifier in the game that isn't trying to threaten the player.</p>
+
+<h2>Why add a reward tile at all</h2>
+<p>A run made entirely of hazards and neutral gates has a ceiling on how good a surprise can feel, because every surprise is bad news by design. MYSTERY exists to occasionally break that pattern — a gate that lights up the same way a hazard does, gets the same full-tile treatment and announcement, and then turns out to be good news. The delight comes specifically from momentarily not knowing which kind of surprise it is.</p>
+
+<h2>It has to never compete with a hazard roll</h2>
+<p>The implementation detail that mattered most: MYSTERY cannot replace or crowd out a hazard roll, or it would quietly make the game easier by displacing real challenge. So it has its own independent cooldown and its own independent roll, and it's only even attempted on a row that already failed its hazard roll:</p>
+<pre><code>val rolledModifier = GateModifierEngine.roll(currentWorldTheme.id, difficulty)
+val effectiveModifier = if (rolledModifier == GateModifier.NONE) {
+    GateModifierEngine.rollMystery()
+} else {
+    rolledModifier
+}</code></pre>
+<p>If the hazard pool rolls something, that's what the gate gets — full stop, MYSTERY doesn't even get a chance to roll. Only on a row that would otherwise have been a completely normal gate does MYSTERY get its shot, at roughly a 1% rate with its own 6-gate minimum cooldown, deliberately mirroring how conservative the hazard cooldowns already are.</p>
+
+<h2>Why the reward itself is a coin flip between two different rewards</h2>
+<p>The two possible outcomes — a flat coin bonus, or a temporary preview of a random skin the player doesn't currently own — serve slightly different goals. The coin bonus is unambiguous, banked instantly, no strings attached. The skin preview is closer to a soft upsell: it lets a player run for a few seconds with a skin they haven't unlocked, purely so "oh, that one looks good" becomes a lived experience instead of a static shop thumbnail. Neither reward is large enough to matter economically — this was never meant to be a meaningful income source, just a texture of surprise layered onto an otherwise fully hazard-driven system.</p>
+
+<h2>Why it stays rare</h2>
+<p>A ~1% roll sounds almost not worth building. That's intentional. If MYSTERY showed up often, it would stop being a delightful surprise and start being an expected mechanic the player optimizes around — checking every gate row for the gold sparkle instead of reading the actual math problem in front of them. Keeping it rare enough that most runs never see one, and a handful of runs see two, is what keeps it feeling like a gift rather than a system.</p>
+
+<a class="devlog-back" href="index.html">← Back to Devlog</a>
+</main>
+<footer>
+  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+  <div class="links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

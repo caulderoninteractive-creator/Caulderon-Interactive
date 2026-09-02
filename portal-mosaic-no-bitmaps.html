@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070B20">
+<meta name="description" content="How Number Run: Pro Edition renders its 50-shard Portal mosaic entirely with Canvas geometry — no bitmap assets.">
+<title>Rendering the Portal's 50-shard mosaic with zero bitmaps — Devlog</title>
+<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/portal-mosaic-no-bitmaps.html">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Caulderon Interactive">
+<meta property="og:title" content="Rendering the Portal's 50-shard mosaic with zero bitmaps">
+<meta property="og:description" content="How Number Run: Pro Edition renders its 50-shard Portal mosaic entirely with Canvas geometry — no bitmap assets.">
+<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/portal-mosaic-no-bitmaps.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rendering the Portal's 50-shard mosaic with zero bitmaps">
+<meta name="twitter:description" content="How Number Run: Pro Edition renders its 50-shard Portal mosaic entirely with Canvas geometry — no bitmap assets.">
+<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
+  <nav><a href="../index.html#game">Game</a><a href="../index.html#about">About</a><a href="index.html">Devlog</a><a href="../support.html">Support</a></nav>
+</header>
+<main class="legal devlog-post">
+<div class="label">DEVLOG · RENDERING</div>
+<h1>Rendering the Portal's 50-shard mosaic with zero bitmaps</h1>
+<span class="devlog-date">30 AUGUST 2026</span>
+
+<p>Number Run: Pro Edition's long-term progression arc is the Portal — collect 50 Shards across many runs and it fully activates. The obvious way to show that progress is a ring divided into 50 wedges that light up one at a time. The less obvious part was doing it without a single piece of bitmap art, which is a rule the whole project holds itself to: every visual — orb skins, world backgrounds, UI, particles — is drawn on Canvas at runtime.</p>
+
+<h2>Why not just 50 pre-baked wedge images</h2>
+<p>A sprite sheet of 50 identical pie-slice wedges would have been the fast way out, but it's also the boring way out — uniform wedges read as a plain progress bar wearing a circle costume. The actual goal was for the mosaic to look like something that was <em>assembled</em>, with each fragment slightly irregular, the way a real shattered-and-reassembled object would look.</p>
+
+<h2>Deterministic, seeded geometry</h2>
+<p>Each shard's shape is generated once, from a fixed seed, the first time the mosaic composable is built:</p>
+<pre><code>private fun buildShardGeometry(required: Int, seed: Int = 0x506F7274): List&lt;ShardGeo&gt; {
+    val rnd = Random(seed)
+    val step = 360f / required
+    val gap = step * 0.16f
+    return List(required) { i -&gt;
+        ShardGeo(
+            startDeg = i * step + gap / 2f,
+            endDeg = (i + 1) * step - gap / 2f,
+            innerR = 0.40f + rnd.nextFloat() * 0.05f,
+            outerR = 0.90f + rnd.nextFloat() * 0.07f,
+            jitter = FloatArray(4) { (rnd.nextFloat() - 0.5f) * 0.05f }
+        )
+    }
+}</code></pre>
+<p>The fixed seed matters more than it looks like it should. Without it, every recomposition would reshuffle the wedge shapes and the mosaic would visibly "reshuffle" itself on screen for no reason. With it, the 50 shapes are stable for the lifetime of the app but still look organically irregular rather than mechanically uniform — each one gets its own inner radius, outer radius and four corner-jitter values, all derived from the same seeded stream.</p>
+
+<h2>Lit vs. unlit is a completely different draw path</h2>
+<p>An unlit shard isn't a dimmed version of a lit one — it's drawn as a bare 1px outline at 8% opacity, nothing more. A lit shard gets a two-pass soft glow (layered translucent strokes, not a blur filter — Compose's Canvas has no cheap blur, so "glow" everywhere in this game means several overlapping semi-transparent shapes instead), a radial gradient fill from white-hot at the center to the Portal's accent color at the edges, and a crisp white rim stroke. The visual gap between "not earned" and "earned" needed to be large, because 49-out-of-50 lit should still read as meaningfully different from all 50.</p>
+
+<h2>The pop-in animation only plays for genuinely new shards</h2>
+<p>This was the part that actually took longest to get right. If you open the Portal screen with 30 shards already owned, none of them should animate in — they were earned in previous sessions and should just be there. Only a shard earned <em>during the current session</em> gets the 700ms scale-and-settle entrance. That distinction lives in a small piece of state that snapshots "already owned" on first composition and only animates the delta:</p>
+<pre><code>LaunchedEffect(Unit) {
+    repeat(shardsOwned) { settled[it] = true }
+}
+
+LaunchedEffect(shardsOwned) {
+    if (shardsOwned &gt; lastKnownOwned) {
+        for (i in lastKnownOwned until shardsOwned) {
+            val anim = Animatable(0f)
+            entrance[i] = anim
+            launch {
+                anim.animateTo(1f, tween(700, easing = FastOutSlowInEasing))
+                settled[i] = true
+                entrance.remove(i)
+            }
+        }
+    }
+    lastKnownOwned = shardsOwned
+}</code></pre>
+<p>Get this backwards and every visit to the Portal screen replays all 30 entrance animations at once, which looks like a bug even though nothing is technically wrong.</p>
+
+<h2>The takeaway</h2>
+<p>None of this needed a single texture. A seeded random generator, some polygon math, and layered-alpha shapes standing in for glow got a result that looks hand-crafted rather than programmatically tiled — which was really the whole bet behind building this game without bitmap assets in the first place.</p>
+
+<a class="devlog-back" href="index.html">← Back to Devlog</a>
+</main>
+<footer>
+  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+  <div class="links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

@@ -32,4 +32,27 @@
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/portal-mosaic-no-bitmaps.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/multiplier-fatigue.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/why-mystery-gates.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

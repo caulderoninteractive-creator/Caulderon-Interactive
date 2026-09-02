@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070B20">
+<meta name="description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
+<title>Multiplier Fatigue: fixing runaway scores without nerfing the fun part — Devlog</title>
+<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/multiplier-fatigue.html">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Caulderon Interactive">
+<meta property="og:title" content="Multiplier Fatigue: fixing runaway scores without nerfing the fun part">
+<meta property="og:description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
+<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/multiplier-fatigue.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Multiplier Fatigue: fixing runaway scores without nerfing the fun part">
+<meta name="twitter:description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
+<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
+  <nav><a href="../index.html#game">Game</a><a href="../index.html#about">About</a><a href="index.html">Devlog</a><a href="../support.html">Support</a></nav>
+</header>
+<main class="legal devlog-post">
+<div class="label">DEVLOG · GAME DESIGN</div>
+<h1>Multiplier Fatigue: fixing runaway scores without nerfing the fun part</h1>
+<span class="devlog-date">22 AUGUST 2026</span>
+
+<p>Number Run: Pro Edition's gates do simple arithmetic to your orb's value — add, subtract, multiply, divide. Early on, a lane of consecutive ×2 and ×3 gates could take a score from three digits to unreadable in about a second and a half. Technically nothing was wrong; two ×3 hits in a row really is ×9. The problem was that the run stopped being interesting the moment a player found a lane of multipliers and just held it, because every additional hit was worth doubly-exponentially more than the last.</p>
+
+<h2>The trap: don't touch what a gate says it does</h2>
+<p>The tempting fix is to just weaken multiply gates — make ×3 mean ×2.4, or cap the value a multiply can reach. Both of those break something more important than score pacing: this is an <em>exact-target</em> game. Every level has a precise numeric target, and the level's solution path is generated assuming a ×3 gate multiplies by exactly 3. Quietly changing that value mid-run would make levels mathematically unsolvable, silently, which is worse than a runaway score.</p>
+
+<h2>The actual fix: separate what the ball's value does from what the run's score does</h2>
+<p>The two were sharing one multiplier before this change. Splitting them apart made the rest of the problem tractable:</p>
+<ul>
+<li><strong>Ball value</strong> — pure arithmetic, always. A ×3 gate is always exactly ×3. This never changes, ever, regardless of what else is happening in the run.</li>
+<li><strong>Run score</strong> — a separate number that rewards <em>varied</em> play. This is the only thing Multiplier Fatigue is allowed to touch.</li>
+</ul>
+<p>With that split in place, fatigue could apply a decaying bonus multiplier to score, specifically and only on consecutive multiply hits, without ever being able to make a level unsolvable:</p>
+<pre><code>val fatigueMultiplier = if (op.type == OpType.MUL) {
+    (1f / (1f + max(0, mulStreakIndex - 1) * GameConfig.MUL_FATIGUE_DECAY_PER_HIT))
+        .coerceAtLeast(GameConfig.MUL_FATIGUE_FLOOR)
+} else 1f</code></pre>
+<p>An isolated ×3 hit — one multiply gate with adds and subtracts around it — still lands at full score value. It's only a <em>chain</em> of back-to-back multiplies that gets diminishing score returns, decaying toward a floor rather than to zero, and the streak resets itself after a short cooldown (<code>MUL_FATIGUE_RESET_FRAMES</code>) so a player who naturally spaces out their multiply hits never even notices the system exists.</p>
+
+<h2>A hard ceiling as the actual last line of defense</h2>
+<p>Fatigue changes incentives, but it doesn't <em>prevent</em> a determined chain of multiplies from eventually pushing the ball's value absurdly high — and it shouldn't have to, because the ball value is deliberately untouched by it. So there's a separate, unrelated hard cap: <code>GameConfig.MAX_PLAYER_VALUE</code>. If the ball's value ever reaches it, gameplay freezes for a short countdown with a clear "MAXIMUM VALUE REACHED" warning, then the value resets to whatever it was at the start of the current level. That path should be effectively unreachable through normal play — it exists purely so an edge case can never corrupt the run state instead of trusting fatigue alone to prevent it.</p>
+
+<h2>What this bought</h2>
+<p>The mechanical meaning of every gate stayed exactly what it says on the tile — a promise the game can't afford to break. Score pacing got fixed by discouraging one specific pattern (spamming multiplies back-to-back) without discouraging multiply gates themselves, which are still one of the most satisfying things to hit in the game. And a genuinely unreachable failure mode got a real, if extremely unlikely, backstop instead of an assumption.</p>
+
+<a class="devlog-back" href="index.html">← Back to Devlog</a>
+</main>
+<footer>
+  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+  <div class="links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
