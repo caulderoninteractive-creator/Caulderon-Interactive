@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070B20">
+<meta name="description" content="Devlog — build notes, design decisions and rendering write-ups from Caulderon Interactive on Number Run: Pro Edition.">
+<title>Devlog — Caulderon Interactive</title>
+<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/index.html">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caulderon Interactive">
+<meta property="og:title" content="Devlog — Caulderon Interactive">
+<meta property="og:description" content="Build notes, design decisions and rendering write-ups from Caulderon Interactive on Number Run: Pro Edition.">
+<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/index.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Devlog — Caulderon Interactive">
+<meta name="twitter:description" content="Build notes, design decisions and rendering write-ups from Caulderon Interactive on Number Run: Pro Edition.">
+<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
+  <nav><a href="../index.html#game">Game</a><a href="../index.html#about">About</a><a href="index.html">Devlog</a><a href="../support.html">Support</a></nav>
+</header>
+<main class="legal">
+<div class="label">CAULDERON INTERACTIVE · DEVLOG</div>
+<h1>Devlog</h1>
+<p>Short write-ups on how Number Run: Pro Edition is actually built — rendering decisions, design trade-offs, and the occasional bug worth explaining. No bitmap assets, no game engine, everything hand-rolled in Kotlin and Jetpack Compose.</p>
+
+<div class="devlog-list">
+
+<a class="devlog-entry" href="portal-mosaic-no-bitmaps.html">
+<span class="devlog-date">30 AUGUST 2026</span>
+<h3>Rendering the Portal's 50-shard mosaic with zero bitmaps</h3>
+<p>How the Portal's shard ring is built from deterministic Canvas geometry instead of pre-rendered art — and why each shard needed its own hand-picked polygon rather than a shared sprite.</p>
+<span class="devlog-tag">RENDERING</span>
+</a>
+
+<a class="devlog-entry" href="multiplier-fatigue.html">
+<span class="devlog-date">22 AUGUST 2026</span>
+<h3>Multiplier Fatigue: fixing runaway scores without nerfing the fun part</h3>
+<p>Chained ×2/×3 gates were turning scores into an exponential mess. The fix had to punish spam without ever touching what a gate actually multiplies — here's the distinction that mattered.</p>
+<span class="devlog-tag">GAME DESIGN</span>
+</a>
+
+<a class="devlog-entry" href="why-mystery-gates.html">
+<span class="devlog-date">12 AUGUST 2026</span>
+<h3>Why MYSTERY gates exist (and why they're rare on purpose)</h3>
+<p>Every other gate modifier in the game is a hazard. MYSTERY is the one exception — a ~1% reward roll with its own independent cooldown so it never competes with or replaces a hazard. Here's the reasoning.</p>
+<span class="devlog-tag">GAME DESIGN</span>
+</a>
+
+</div>
+</main>
+<footer>
+  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+  <div class="links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
