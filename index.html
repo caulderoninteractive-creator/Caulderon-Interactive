@@ -187,7 +187,10 @@ a{color:inherit}
   background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
 }
 .panel-logo{
-  width:150px;height:150px;
+  width:min(78%, 290px);
+  height:auto;
+  aspect-ratio:1;
+  object-fit:cover;
   border-radius:30px;
   position:relative;
   z-index:2;
@@ -350,23 +353,6 @@ footer a{text-decoration:none}
   </div>
 </section>
 
-<section id="stores" class="section stores">
-  <div class="label">AVAILABLE PLATFORMS</div>
-  <h2>Choose your platform</h2>
-  <div class="store-grid">
-    <a class="store-card" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
-      <img src="assets/google-play.png" alt="Google Play">
-      <div><b>Google Play</b><p>Available now</p></div>
-      <span class="arrow">↗</span>
-    </a>
-    <a class="store-card" id="ios-coming-soon" href="#ios-coming-soon" aria-label="Number Run for iOS — coming soon">
-      <img src="assets/app-store.png" alt="App Store">
-      <div><b>iOS</b><p>Coming soon</p></div>
-      <span class="arrow">•</span>
-    </a>
-  </div>
-  <p>The iOS version of Number Run: Pro Edition is planned. This page will be updated with the App Store link when it becomes available.</p>
-</section>
 
 <section id="about" class="section split">
   <div><div class="label">ABOUT CAULDERON INTERACTIVE</div><h2>Games &amp; software with purpose.</h2></div>
