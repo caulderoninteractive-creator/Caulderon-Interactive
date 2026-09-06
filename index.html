@@ -21,10 +21,7 @@
 <meta name="twitter:description" content="A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy. Available now on Google Play.">
 <meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
 <link rel="stylesheet" href="styles.css">
-
-<style>
-.store-icon{display:inline-flex;align-items:center;justify-content:center;line-height:1;font-weight:700}.play-icon{font-size:.9em}.apple-icon{font-size:1.05em}.platform-pills{display:flex;flex-wrap:wrap;gap:10px}.store-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.store-card{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.035);color:inherit;text-decoration:none}.store-card:hover{border-color:rgba(255,255,255,.28);transform:translateY(-1px)}.store-card-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#fff;color:#111;font-size:21px;flex:0 0 42px}.store-card b{display:block}.store-card p,.store-note{margin:4px 0 0;opacity:.72}.store-card>span{margin-left:auto;opacity:.65}.store-note{max-width:720px}@media(max-width:700px){.store-grid{grid-template-columns:1fr}.actions{display:flex;flex-wrap:wrap}}
-</style>
+<link rel="stylesheet" href="site-enhancements.css">
 </head>
 <body>
 <header class="nav">
@@ -34,37 +31,81 @@
 <main>
 <section class="hero">
 <div class="orb"></div>
-<img class="hero-logo" src="icon.png" width="84" height="84" style="width:84px;height:84px;max-width:84px;max-height:84px;object-fit:contain;" alt="Number Run: Pro Edition app icon" loading="eager">
+<div class="hero-icon-wrap" aria-label="Number Run: Pro Edition">
+  <div class="hero-icon-halo"></div>
+  <img class="hero-logo" src="icon.png" width="84" height="84" alt="Number Run: Pro Edition app icon" loading="eager">
+  <span class="hero-icon-spark spark-a"></span>
+  <span class="hero-icon-spark spark-b"></span>
+  <span class="hero-icon-spark spark-c"></span>
+</div>
 <div class="eyebrow">CAULDERON INTERACTIVE PRESENTS</div>
 <h1>NUMBER RUN:<br><span>PRO EDITION</span></h1>
 <div class="tagline">THINK FAST. RUN FASTER.</div>
 <p class="intro">A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy.</p>
-<div class="actions"><a class="button primary" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener"><span class="store-icon play-icon" aria-hidden="true">▶</span> Get it on Google Play</a><a class="button secondary" href="#ios-coming-soon"><span class="store-icon apple-icon" aria-hidden="true"></span> iOS — Coming Soon</a><a class="button secondary" href="support.html">Player support</a></div>
+<div class="actions">
+  <a class="button primary store-button" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
+    <img src="assets/google-play-icon.svg" alt="" aria-hidden="true"><span>Get it on Google Play</span>
+  </a>
+  <a class="button ios-button" href="#ios-coming-soon">
+    <img src="assets/app-store-icon.svg" alt="" aria-hidden="true"><span>App Store <small>Coming Soon</small></span>
+  </a>
+  <a class="button secondary" href="support.html">Player support</a>
+</div>
 </section>
 
 <section id="game" class="section game">
 <div><div class="label">THE GAME</div><h2>Number Run: Pro Edition</h2>
 <p>Make split-second choices, build combos, collect Coins, unlock content, and push your run further. Number Run: Pro Edition is designed as a focused, replayable arcade experience.</p>
-<div class="platform-pills"><a class="pill" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener"><span class="store-icon play-icon" aria-hidden="true">▶</span> AVAILABLE NOW ON GOOGLE PLAY</a><a class="pill" href="#ios-coming-soon"><span class="store-icon apple-icon" aria-hidden="true"></span> iOS — COMING SOON</a></div></div>
+<div class="availability-pills">
+  <a class="pill play-pill" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
+    <img src="assets/google-play-icon.svg" alt="" aria-hidden="true"> AVAILABLE NOW ON GOOGLE PLAY
+  </a>
+  <a class="pill ios-pill" href="#ios-coming-soon">
+    <img src="assets/app-store-icon.svg" alt="" aria-hidden="true"> APP STORE — COMING SOON
+  </a>
+</div></div>
 <div class="game-panel"><div class="panel-ring"></div><img class="panel-logo" src="icon.png" width="150" height="150" alt="Number Run: Pro Edition logo" loading="lazy"></div>
 </section>
 
-<section id="stores" class="section stores">
-  <div class="label">AVAILABLE PLATFORMS</div>
-  <h2>Choose your platform</h2>
+
+<section id="stores" class="section stores-section">
+  <div class="stores-heading">
+    <div>
+      <div class="label">AVAILABLE PLATFORMS</div>
+      <h2>Choose your platform.</h2>
+      <p>Number Run: Pro Edition is live on Google Play. An App Store release is planned and will be announced here when it is ready.</p>
+    </div>
+    <div class="stores-glow" aria-hidden="true"></div>
+  </div>
+
   <div class="store-grid">
-    <a class="store-card" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
-      <div class="store-card-icon play-store-mark" aria-hidden="true">▶</div>
-      <div><b>Google Play</b><p>Available now</p></div>
-      <span aria-hidden="true">↗</span>
+    <a class="store-card store-card-live" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
+      <div class="store-icon"><img src="assets/google-play-icon.svg" alt="Google Play"></div>
+      <div class="store-card-copy">
+        <span class="store-status live">AVAILABLE NOW</span>
+        <h3>Google Play</h3>
+        <p>Download Number Run: Pro Edition from Google Play.</p>
+        <span class="store-link">Open Google Play <b>↗</b></span>
+      </div>
+      <span class="card-arrow" aria-hidden="true">→</span>
     </a>
-    <a class="store-card" id="ios-coming-soon" href="#ios-coming-soon" aria-label="Number Run: Pro Edition for iOS — coming soon">
-      <div class="store-card-icon apple-store-mark" aria-hidden="true"></div>
-      <div><b>iOS</b><p>Coming soon</p></div>
-      <span aria-hidden="true">•</span>
+
+    <a id="ios-coming-soon" class="store-card store-card-soon" href="#ios-coming-soon">
+      <div class="store-icon app-store-icon"><img src="assets/app-store-icon.svg" alt="App Store"></div>
+      <div class="store-card-copy">
+        <span class="store-status soon">COMING SOON</span>
+        <h3>App Store</h3>
+        <p>The iPhone and iPad version is planned. We’ll publish the official App Store link here when it launches.</p>
+        <span class="store-link">Release announcement <b>•</b></span>
+      </div>
+      <span class="card-arrow" aria-hidden="true">✦</span>
     </a>
   </div>
-  <p class="store-note">The iOS version of Number Run: Pro Edition is planned. This page will be updated with the App Store link when it becomes available.</p>
+
+  <div class="store-note">
+    <span class="note-dot"></span>
+    <span>Only the Google Play listing is currently available. The App Store card is intentionally not a download link yet.</span>
+  </div>
 </section>
 
 <section id="about" class="section split">
