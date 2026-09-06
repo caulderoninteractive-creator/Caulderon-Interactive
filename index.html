@@ -2,222 +2,352 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#070B20">
 <meta name="description" content="Number Run: Pro Edition — a fast-paced number game from Caulderon Interactive. Available now on Google Play.">
 <title>Caulderon Interactive — Number Run: Pro Edition</title>
-<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Caulderon Interactive">
-<meta property="og:title" content="Number Run: Pro Edition — Caulderon Interactive">
-<meta property="og:description" content="A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy. Available now on Google Play.">
-<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
-<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Number Run: Pro Edition — Caulderon Interactive">
-<meta name="twitter:description" content="A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy. Available now on Google Play.">
-<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
 <link rel="stylesheet" href="styles.css">
-
 <style>
-.store-icon{display:inline-flex;align-items:center;justify-content:center;line-height:1;font-weight:700}.play-icon{font-size:.9em}.apple-icon{font-size:1.05em}.platform-pills{display:flex;flex-wrap:wrap;gap:10px}.store-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.store-card{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.035);color:inherit;text-decoration:none}.store-card:hover{border-color:rgba(255,255,255,.28);transform:translateY(-1px)}.store-card-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#fff;color:#111;font-size:21px;flex:0 0 42px}.store-card b{display:block}.store-card p,.store-note{margin:4px 0 0;opacity:.72}.store-card>span{margin-left:auto;opacity:.65}.store-note{max-width:720px}@media(max-width:700px){.store-grid{grid-template-columns:1fr}.actions{display:flex;flex-wrap:wrap}}
+:root{
+  --bg:#070b20;
+  --bg2:#0b102b;
+  --text:#f4f7ff;
+  --muted:#aeb8d4;
+  --line:rgba(255,255,255,.10);
+  --cyan:#5ee7ff;
+  --cyan2:#31c9eb;
+  --card:rgba(255,255,255,.045);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -15%, rgba(63,112,255,.14), transparent 42%),
+    linear-gradient(180deg,var(--bg),#06091a 75%);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:inherit}
+.nav{
+  min-height:68px;
+  padding:0 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  background:rgba(7,11,32,.82);
+  backdrop-filter:blur(16px);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  letter-spacing:.06em;
+}
+.brand .mark{
+  width:40px;height:40px;
+  display:grid;place-items:center;
+  border:1px solid rgba(94,231,255,.8);
+  border-radius:10px;
+  color:var(--cyan);
+  font-weight:900;
+  font-size:22px;
+}
+.brand span:last-child{
+  font-weight:800;
+  font-size:18px;
+}
+.brand b{color:var(--cyan)}
+.nav nav{display:flex;gap:30px}
+.nav nav a{text-decoration:none;color:#d9e0f4;font-size:15px}
+.nav nav a:hover{color:var(--cyan)}
+
+.hero{
+  max-width:1100px;
+  min-height:690px;
+  margin:auto;
+  padding:105px 24px 90px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero-logo{
+  width:112px!important;height:112px!important;
+  margin-bottom:30px;
+  border-radius:25px;
+  box-shadow:0 20px 55px rgba(0,0,0,.4);
+}
+.eyebrow,.label{
+  color:var(--cyan);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.20em;
+}
+.eyebrow{margin-bottom:18px}
+.hero h1{
+  margin:0;
+  font-size:clamp(44px,7vw,82px);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.hero h1 span{
+  background:linear-gradient(90deg,#fff,#91eaff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.tagline{
+  margin-top:22px;
+  font-weight:800;
+  letter-spacing:.22em;
+  font-size:14px;
+}
+.intro{
+  max-width:680px;
+  margin:22px auto 34px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
+}
+.actions{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.store-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:68px;
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  text-decoration:none;
+  transition:.2s ease;
+}
+.store-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(94,231,255,.45);
+  background:rgba(255,255,255,.06);
+}
+.store-link img{
+  display:block;
+  width:205px;
+  height:58px;
+  object-fit:contain;
+}
+.support-link{
+  min-height:68px;
+  padding:0 25px;
+  display:flex;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:750;
+}
+.support-link:hover{border-color:rgba(94,231,255,.45);color:var(--cyan)}
+
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:92px 24px;
+  border-top:1px solid var(--line);
+}
+.section h2{
+  margin:10px 0 18px;
+  font-size:clamp(30px,4vw,48px);
+  letter-spacing:-.035em;
+}
+.section p{color:var(--muted);line-height:1.75}
+.game{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:70px;
+  align-items:center;
+}
+.game-panel{
+  min-height:340px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+}
+.panel-logo{
+  width:150px;height:150px;
+  border-radius:30px;
+  position:relative;
+  z-index:2;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.platform-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:9px 13px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  text-decoration:none;
+  font-size:12px;font-weight:800;
+}
+.pill img{height:20px;width:auto;display:block;object-fit:contain}
+.store-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:28px;
+}
+.store-card{
+  display:flex;align-items:center;gap:22px;
+  min-height:145px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--card);
+  text-decoration:none;
+}
+.store-card:hover{border-color:rgba(94,231,255,.4)}
+.store-card img{
+  width:180px;height:70px;
+  object-fit:contain;
+  flex:0 0 180px;
+}
+.store-card b{font-size:17px}
+.store-card p{margin:5px 0 0;font-size:14px}
+.store-card .arrow{margin-left:auto;color:var(--muted)}
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:28px;
+}
+.feature{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--card);
+}
+.feature b{font-size:16px}
+.feature p{font-size:14px;margin-bottom:0}
+.contact-strip{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+.contact-actions{display:flex;gap:18px;flex-wrap:wrap}
+.contact-actions a{
+  padding:13px 17px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  text-decoration:none;
+}
+footer{
+  max-width:1100px;
+  margin:auto;
+  padding:28px 24px 42px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#77829f;
+  font-size:13px;
+}
+footer .links{display:flex;gap:18px}
+footer a{text-decoration:none}
+
+@media(max-width:800px){
+  .nav{padding:0 18px}
+  .nav nav{gap:14px}
+  .nav nav a:nth-child(2){display:none}
+  .game,.split{grid-template-columns:1fr;gap:35px}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .contact-strip{display:block}
+  .contact-actions{margin-top:25px}
+}
+@media(max-width:560px){
+  .nav nav{display:none}
+  .hero{min-height:620px;padding-top:72px}
+  .hero h1{font-size:46px}
+  .intro{font-size:16px}
+  .actions{width:100%;max-width:330px}
+  .store-link,.support-link{width:100%}
+  .store-link img{width:205px}
+  .store-grid,.feature-grid{grid-template-columns:1fr}
+  .store-card{flex-wrap:wrap}
+  .store-card img{width:180px;flex-basis:180px}
+  footer{display:block}
+  footer .links{margin-top:15px}
+}
 </style>
-
-
-
-<style>
-/* --- Professional hero/store layout --- */
-.hero {
-  min-height: 620px;
-  padding: 96px 24px 84px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-logo {
-  position: relative;
-  z-index: 2;
-  width: 112px !important;
-  height: 112px !important;
-  margin: 0 0 28px;
-  border-radius: 24px;
-  box-shadow: 0 18px 50px rgba(0,0,0,.35);
-}
-
-.eyebrow {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 14px;
-  letter-spacing: .18em;
-}
-
-.hero h1 {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 16px;
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: .95;
-}
-
-.hero .tagline {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 18px;
-}
-
-.hero .intro {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto 34px;
-  line-height: 1.7;
-}
-
-.actions {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.actions .button {
-  min-height: 72px;
-  padding: 10px 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.actions .button.primary {
-  min-width: 260px;
-}
-
-.actions .button.secondary {
-  min-width: 180px;
-}
-
-.platform-badge {
-  display: block;
-  width: 220px;
-  height: 56px;
-  object-fit: contain;
-  object-position: center;
-}
-
-.actions .button.primary .platform-badge {
-  width: 225px;
-}
-
-.actions .button.secondary .platform-badge {
-  width: 190px;
-}
-
-.actions .button.secondary:has(.platform-badge) {
-  padding: 8px 16px;
-}
-
-/* Make the platform cards use the supplied artwork without giant nested buttons. */
-.store-grid {
-  align-items: stretch;
-}
-
-.store-card {
-  min-height: 120px;
-  padding: 20px 22px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.store-card .store-badge {
-  width: 170px;
-  height: 70px;
-  object-fit: contain;
-  flex: 0 0 170px;
-}
-
-.store-card > div:not(.store-card-icon) {
-  min-width: 0;
-}
-
-@media (max-width: 700px) {
-  .hero {
-    min-height: 580px;
-    padding: 72px 18px 64px;
-  }
-
-  .hero-logo {
-    width: 96px !important;
-    height: 96px !important;
-  }
-
-  .actions {
-    width: 100%;
-    max-width: 380px;
-  }
-
-  .actions .button,
-  .actions .button.primary,
-  .actions .button.secondary {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .store-card {
-    flex-wrap: wrap;
-  }
-
-  .store-card .store-badge {
-    width: 155px;
-    flex-basis: 155px;
-  }
-}
-</style>
-
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
-  <nav><a href="index.html#game">Game</a><a href="index.html#stores">Stores</a><a href="index.html#about">About</a><a href="support.html">Support</a></nav>
+  <a class="brand" href="index.html">
+    <span class="mark">C</span>
+    <span>CAULDERON <b>INTERACTIVE</b></span>
+  </a>
+  <nav>
+    <a href="#game">Game</a>
+    <a href="#stores">Stores</a>
+    <a href="#about">About</a>
+    <a href="support.html">Support</a>
+  </nav>
 </header>
+
 <main>
 <section class="hero">
-<div class="orb"></div>
-<img class="hero-logo" src="icon.png" width="84" height="84" style="width:84px;height:84px;max-width:84px;max-height:84px;object-fit:contain;" alt="Number Run: Pro Edition app icon" loading="eager">
-<div class="eyebrow">CAULDERON INTERACTIVE PRESENTS</div>
-<h1>NUMBER RUN:<br><span>PRO EDITION</span></h1>
-<div class="tagline">THINK FAST. RUN FASTER.</div>
-<p class="intro">A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy.</p>
-<div class="actions">
-<a class="button primary" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener" aria-label="Get Number Run on Google Play">
-  <img class="platform-badge" src="assets/google-play.png" alt="Get it on Google Play">
-</a>
-<a class="button secondary" href="#ios-coming-soon" aria-label="Number Run for iOS — coming soon">
-  <img class="platform-badge" src="assets/app-store.png" alt="Download on the App Store — coming soon">
-</a>
-<a class="button secondary" href="support.html">Player support</a>
-</div>
+  <img class="hero-logo" src="icon.png" width="112" height="112" alt="Number Run: Pro Edition app icon">
+  <div class="eyebrow">CAULDERON INTERACTIVE PRESENTS</div>
+  <h1>NUMBER RUN:<br><span>PRO EDITION</span></h1>
+  <div class="tagline">THINK FAST. RUN FASTER.</div>
+  <p class="intro">A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy.</p>
+
+  <div class="actions">
+    <a class="store-link" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener" aria-label="Get Number Run on Google Play">
+      <img src="assets/google-play.png" alt="Get it on Google Play">
+    </a>
+    <a class="store-link" href="#ios-coming-soon" aria-label="Number Run on the App Store — coming soon">
+      <img src="assets/app-store.png" alt="Download on the App Store — coming soon">
+    </a>
+    <a class="support-link" href="support.html">Player support</a>
+  </div>
 </section>
 
 <section id="game" class="section game">
-<div><div class="label">THE GAME</div><h2>Number Run: Pro Edition</h2>
-<p>Make split-second choices, build combos, collect Coins, unlock content, and push your run further. Number Run: Pro Edition is designed as a focused, replayable arcade experience.</p>
-<div class="platform-pills"><a class="pill" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener"><span class="store-icon play-icon" aria-hidden="true">▶</span> AVAILABLE NOW ON GOOGLE PLAY</a><a class="pill" href="#ios-coming-soon"><span class="store-icon apple-icon" aria-hidden="true"></span> iOS — COMING SOON</a></div></div>
-<div class="game-panel"><div class="panel-ring"></div><img class="panel-logo" src="icon.png" width="150" height="150" alt="Number Run: Pro Edition logo" loading="lazy"></div>
+  <div>
+    <div class="label">THE GAME</div>
+    <h2>Number Run: Pro Edition</h2>
+    <p>Make split-second choices, build combos, collect Coins, unlock content, and push your run further. Number Run: Pro Edition is designed as a focused, replayable arcade experience.</p>
+    <div class="platform-pills">
+      <a class="pill" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
+        <img src="assets/google-play.png" alt=""> AVAILABLE NOW ON GOOGLE PLAY
+      </a>
+      <a class="pill" href="#ios-coming-soon">
+        <img src="assets/app-store.png" alt=""> iOS — COMING SOON
+      </a>
+    </div>
+  </div>
+  <div class="game-panel">
+    <img class="panel-logo" src="icon.png" width="150" height="150" alt="Number Run: Pro Edition logo">
+  </div>
 </section>
 
 <section id="stores" class="section stores">
@@ -225,46 +355,50 @@
   <h2>Choose your platform</h2>
   <div class="store-grid">
     <a class="store-card" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
-      <div class="store-card-icon play-store-mark" aria-hidden="true">▶</div>
+      <img src="assets/google-play.png" alt="Google Play">
       <div><b>Google Play</b><p>Available now</p></div>
-      <span aria-hidden="true">↗</span>
+      <span class="arrow">↗</span>
     </a>
-    <a class="store-card" id="ios-coming-soon" href="#ios-coming-soon" aria-label="Number Run: Pro Edition for iOS — coming soon">
-      <div class="store-card-icon apple-store-mark" aria-hidden="true"></div>
+    <a class="store-card" id="ios-coming-soon" href="#ios-coming-soon" aria-label="Number Run for iOS — coming soon">
+      <img src="assets/app-store.png" alt="App Store">
       <div><b>iOS</b><p>Coming soon</p></div>
-      <span aria-hidden="true">•</span>
+      <span class="arrow">•</span>
     </a>
   </div>
-  <p class="store-note">The iOS version of Number Run: Pro Edition is planned. This page will be updated with the App Store link when it becomes available.</p>
+  <p>The iOS version of Number Run: Pro Edition is planned. This page will be updated with the App Store link when it becomes available.</p>
 </section>
 
 <section id="about" class="section split">
-<div><div class="label">ABOUT CAULDERON INTERACTIVE</div><h2>Games &amp; software with purpose.</h2></div>
-<p>Caulderon Interactive creates games and software with an emphasis on clear design, responsive experiences, and products that are easy to understand and enjoyable to use.</p>
+  <div><div class="label">ABOUT CAULDERON INTERACTIVE</div><h2>Games &amp; software with purpose.</h2></div>
+  <p>Caulderon Interactive creates games and software with an emphasis on clear design, responsive experiences, and products that are easy to understand and enjoyable to use.</p>
 </section>
 
 <section class="section features">
-<div class="label">NUMBER RUN: PRO EDITION</div>
-<h2>What's inside</h2>
-<div class="feature-grid">
-<div class="feature"><b>Fast gameplay</b><p>Short, focused runs built around quick decisions and escalating challenge.</p></div>
-<div class="feature"><b>Progression</b><p>Scores, Coins, achievements, settings and other progression are stored locally on your device.</p></div>
-<div class="feature"><b>In-game shop</b><p>Buy consumable Coin Packs and Combo Bundles that can include Coins, permanent cosmetics or worlds, sound packs and Remove Ads where offered.</p></div>
-<div class="feature"><b>Optional purchases</b><p>Google Play Billing processes consumable Coin Packs and Combo Bundles, plus the one-time non-consumable Remove Ads purchase.</p></div>
-<div class="feature"><b>Advertising</b><p>Banner, interstitial and optional rewarded video ads are provided through Google AdMob. Remove Ads does not disable voluntary rewarded videos.</p></div>
-<div class="feature"><b>Privacy controls</b><p>Advertising consent can be reviewed through Privacy Options where applicable, while comeback reminders are generated locally on-device.</p></div>
-</div>
+  <div class="label">NUMBER RUN: PRO EDITION</div>
+  <h2>What's inside</h2>
+  <div class="feature-grid">
+    <div class="feature"><b>Fast gameplay</b><p>Short, focused runs built around quick decisions and escalating challenge.</p></div>
+    <div class="feature"><b>Progression</b><p>Scores, Coins, achievements, settings and other progression are stored locally on your device.</p></div>
+    <div class="feature"><b>In-game shop</b><p>Buy consumable Coin Packs and Combo Bundles that can include Coins, permanent cosmetics or worlds, sound packs and Remove Ads where offered.</p></div>
+    <div class="feature"><b>Optional purchases</b><p>Google Play Billing processes consumable Coin Packs and Combo Bundles, plus the one-time non-consumable Remove Ads purchase.</p></div>
+    <div class="feature"><b>Advertising</b><p>Banner, interstitial and optional rewarded video ads are provided through Google AdMob. Remove Ads does not disable voluntary rewarded videos.</p></div>
+    <div class="feature"><b>Privacy controls</b><p>Advertising consent can be reviewed through Privacy Options where applicable, while comeback reminders are generated locally on-device.</p></div>
+  </div>
 </section>
 
 <section class="section contact-strip">
-<div><div class="label">CONTACT</div><h2>Need help or want to work together?</h2></div>
-<div class="contact-actions"><a href="mailto:support.caulderoninteractive@gmail.com">Player support</a><a href="mailto:caulderoninteractive@gmail.com">Business enquiries</a></div>
+  <div><div class="label">CONTACT</div><h2>Need help or want to work together?</h2></div>
+  <div class="contact-actions">
+    <a href="mailto:support.caulderoninteractive@gmail.com">Player support</a>
+    <a href="mailto:caulderoninteractive@gmail.com">Business enquiries</a>
+  </div>
 </section>
 </main>
+
 <footer>
   <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
   <div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
 </footer>
-<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
