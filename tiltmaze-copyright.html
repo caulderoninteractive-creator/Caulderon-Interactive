@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070B20">
+<meta name="description" content="Tilt Maze — Copyright & Licenses">
+<title>Tilt Maze — Copyright & Licenses — Caulderon Interactive</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{
+  --bg:#070b20; --bg2:#0b102b; --text:#f4f7ff; --muted:#aeb8d4;
+  --line:rgba(255,255,255,.10); --cyan:#5ee7ff; --cyan2:#31c9eb;
+  --card:rgba(255,255,255,.045);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -15%, rgba(63,112,255,.14), transparent 42%),
+    linear-gradient(180deg,var(--bg),#06091a 75%);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:inherit}
+.nav{
+  min-height:68px; padding:0 30px; display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid var(--line); background:rgba(7,11,32,.82); backdrop-filter:blur(16px);
+  position:sticky; top:0; z-index:20;
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; letter-spacing:.06em}
+.brand .mark{
+  width:40px;height:40px; display:grid;place-items:center;
+  border:1px solid rgba(94,231,255,.8); border-radius:10px; color:var(--cyan);
+  font-weight:900; font-size:22px;
+}
+.brand span:last-child{font-weight:800; font-size:18px}
+.brand b{color:var(--cyan)}
+.nav nav{display:flex; gap:30px}
+.nav nav a{text-decoration:none; color:#d9e0f4; font-size:15px}
+.nav nav a:hover{color:var(--cyan)}
+.label{color:var(--cyan); font-size:12px; font-weight:800; letter-spacing:.20em}
+.doc{
+  max-width:820px; margin:auto; padding:70px 24px 90px;
+}
+.doc h1{margin:10px 0 6px; font-size:clamp(30px,4.5vw,46px); letter-spacing:-.035em}
+.doc .updated{color:#77829f; font-size:13px; margin-bottom:34px}
+.doc h2{
+  font-size:19px; margin:34px 0 10px; letter-spacing:-.01em;
+  padding-top:22px; border-top:1px solid var(--line);
+}
+.doc p, .doc li{color:var(--muted); line-height:1.8; font-size:15px}
+.doc ul{padding-left:22px}
+.doc .email{color:var(--cyan); text-decoration:none}
+.backlink{
+  display:inline-flex; align-items:center; gap:8px; margin-top:44px;
+  padding:12px 18px; border:1px solid var(--line); border-radius:12px;
+  text-decoration:none; font-weight:700; font-size:14px;
+}
+.backlink:hover{border-color:rgba(94,231,255,.45); color:var(--cyan)}
+footer{
+  max-width:1100px; margin:auto; padding:28px 24px 42px; border-top:1px solid var(--line);
+  display:flex; justify-content:space-between; gap:20px; color:#77829f; font-size:13px;
+}
+footer .links{display:flex; gap:18px; flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--cyan)}
+@media(max-width:800px){ .nav{padding:0 18px} .nav nav{gap:14px} }
+@media(max-width:560px){ .nav nav{display:none} footer{display:block} footer .links{margin-top:15px} }
+</style>
+
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="mark">C</span>
+    <span>CAULDERON <b>INTERACTIVE</b></span>
+  </a>
+  <nav>
+    <a href="index.html#games">Games</a>
+    <a href="tiltmaze.html">Tilt Maze</a>
+    <a href="index.html#about">About</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+<main class="doc">
+  <div class="label">TILT MAZE · COPYRIGHT & LICENSES</div>
+  <h1>Tilt Maze</h1>
+  
+  
+<p>Copyright © <span id="cyear"></span> Caulderon Interactive. All rights reserved.</p>
+<p>“Tilt Maze” and the Tilt Maze logo are trademarks of Caulderon Interactive.</p>
+<h2>Open-Source & Third-Party Libraries</h2>
+<p>The App makes use of the following third-party software:</p>
+<ul><li><b>Kotlin</b> — Apache License 2.0 — © JetBrains and Kotlin contributors</li><li><b>Jetpack Compose & AndroidX</b> — Apache License 2.0 — © The Android Open Source Project</li><li><b>Google Play Billing Library</b> — Distributed under Google's Play Billing Library terms of service</li><li><b>Google Mobile Ads SDK (AdMob)</b> — Distributed under Google APIs Terms of Service</li><li><b>Google User Messaging Platform (UMP) SDK</b> — Distributed under Google APIs Terms of Service</li></ul>
+<h2>Art & Visual Assets</h2>
+<p>All visual elements in Tilt Maze — the ball, maze walls, goal, hazards, and UI — are drawn programmatically on Canvas at runtime. No third-party stock art, bitmap image assets, or third-party fonts are used.</p>
+<h2>Audio</h2>
+<p>Sound effects and music in Tilt Maze are the developer's own or procedurally generated. No third-party audio files, stock sound effects, or externally sourced recordings are used.</p>
+
+  <a class="backlink" href="tiltmaze.html">&larr; Back to Tilt Maze</a>
+</main>
+<footer>
+  <div>&copy; <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+  <div class="links"><a href="tiltmaze-privacy.html">Privacy</a><a href="tiltmaze-terms.html">Terms</a><a href="tiltmaze-support.html">Support</a><a href="tiltmaze-copyright.html">Copyright &amp; Licenses</a></div>
+</footer>
+<script>document.getElementById('cyear').textContent = new Date().getFullYear();document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
