@@ -3,491 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#070B20">
-<meta name="description" content="Number Run: Pro Edition — a fast-paced number game from Caulderon Interactive. Available now on Google Play.">
-<title>Caulderon Interactive — Number Run: Pro Edition</title>
+<meta name="theme-color" content="#06070d">
+<title>Caulderon Interactive — Number Run, Tilt Maze &amp; Block Chakra</title>
+<meta name="description" content="Caulderon Interactive is an independent studio building focused, replayable mobile games — Number Run: Pro Edition, Tilt Maze, and Block Chakra. Every visual and sound is built entirely in code.">
+<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caulderon Interactive">
+<meta property="og:description" content="An independent studio building focused, replayable mobile games — Number Run: Pro Edition, Tilt Maze, and Block Chakra.">
+<meta property="og:image" content="icon.png">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css">
-<style>
-:root{
-  --bg:#070b20;
-  --bg2:#0b102b;
-  --text:#f4f7ff;
-  --muted:#aeb8d4;
-  --line:rgba(255,255,255,.10);
-  --cyan:#5ee7ff;
-  --cyan2:#31c9eb;
-  --card:rgba(255,255,255,.045);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 50% -15%, rgba(63,112,255,.14), transparent 42%),
-    linear-gradient(180deg,var(--bg),#06091a 75%);
-  color:var(--text);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-a{color:inherit}
-.nav{
-  min-height:68px;
-  padding:0 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid var(--line);
-  background:rgba(7,11,32,.82);
-  backdrop-filter:blur(16px);
-  position:sticky;
-  top:0;
-  z-index:20;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
-  letter-spacing:.06em;
-}
-.brand .mark{
-  width:40px;height:40px;
-  display:grid;place-items:center;
-  border:1px solid rgba(94,231,255,.8);
-  border-radius:10px;
-  color:var(--cyan);
-  font-weight:900;
-  font-size:22px;
-}
-.brand span:last-child{
-  font-weight:800;
-  font-size:18px;
-}
-.brand b{color:var(--cyan)}
-.nav nav{display:flex;gap:30px}
-.nav nav a{text-decoration:none;color:#d9e0f4;font-size:15px}
-.nav nav a:hover{color:var(--cyan)}
-
-.hero{
-  max-width:1100px;
-  min-height:690px;
-  margin:auto;
-  padding:105px 24px 90px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero-logo{
-  width:112px!important;height:112px!important;
-  margin-bottom:30px;
-  border-radius:25px;
-  box-shadow:0 20px 55px rgba(0,0,0,.4);
-}
-.eyebrow,.label{
-  color:var(--cyan);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.20em;
-}
-.eyebrow{margin-bottom:18px}
-.hero h1{
-  margin:0;
-  font-size:clamp(44px,7vw,82px);
-  line-height:.98;
-  letter-spacing:-.045em;
-}
-.hero h1 span{
-  background:linear-gradient(90deg,#fff,#91eaff);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.tagline{
-  margin-top:22px;
-  font-weight:800;
-  letter-spacing:.22em;
-  font-size:14px;
-}
-.intro{
-  max-width:680px;
-  margin:22px auto 34px;
-  color:var(--muted);
-  font-size:18px;
-  line-height:1.7;
-}
-.actions{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.store-link{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:68px;
-  padding:7px 12px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(255,255,255,.035);
-  text-decoration:none;
-  transition:.2s ease;
-}
-.store-link:hover{
-  transform:translateY(-2px);
-  border-color:rgba(94,231,255,.45);
-  background:rgba(255,255,255,.06);
-}
-.store-link img{
-  display:block;
-  width:205px;
-  height:58px;
-  object-fit:contain;
-}
-.support-link{
-  min-height:68px;
-  padding:0 25px;
-  display:flex;
-  align-items:center;
-  border:1px solid var(--line);
-  border-radius:16px;
-  text-decoration:none;
-  font-weight:750;
-}
-.support-link:hover{border-color:rgba(94,231,255,.45);color:var(--cyan)}
-
-.section{
-  max-width:1100px;
-  margin:auto;
-  padding:92px 24px;
-  border-top:1px solid var(--line);
-}
-.section h2{
-  margin:10px 0 18px;
-  font-size:clamp(30px,4vw,48px);
-  letter-spacing:-.035em;
-}
-.section p{color:var(--muted);line-height:1.75}
-.game{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:70px;
-  align-items:center;
-}
-.game-panel{
-  min-height:340px;
-  display:grid;
-  place-items:center;
-  position:relative;
-  border:1px solid var(--line);
-  border-radius:28px;
-  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
-}
-.panel-logo{
-  width:min(78%, 290px);
-  height:auto;
-  aspect-ratio:1;
-  object-fit:cover;
-  border-radius:30px;
-  position:relative;
-  z-index:2;
-  box-shadow:0 20px 60px rgba(0,0,0,.4);
-}
-.platform-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
-.pill{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:9px 13px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  text-decoration:none;
-  font-size:12px;font-weight:800;
-}
-.pill img{height:20px;width:auto;display:block;object-fit:contain}
-.store-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  margin-top:28px;
-}
-.store-card{
-  display:flex;align-items:center;gap:22px;
-  min-height:145px;
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:var(--card);
-  text-decoration:none;
-}
-.store-card:hover{border-color:rgba(94,231,255,.4)}
-.store-card img{
-  width:180px;height:70px;
-  object-fit:contain;
-  flex:0 0 180px;
-}
-.store-card b{font-size:17px}
-.store-card p{margin:5px 0 0;font-size:14px}
-.store-card .arrow{margin-left:auto;color:var(--muted)}
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-}
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:28px;
-}
-.feature{
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:var(--card);
-}
-.feature b{font-size:16px}
-.feature p{font-size:14px;margin-bottom:0}
-.contact-strip{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-.contact-actions{display:flex;gap:18px;flex-wrap:wrap}
-.contact-actions a{
-  padding:13px 17px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  text-decoration:none;
-}
-footer{
-  max-width:1100px;
-  margin:auto;
-  padding:28px 24px 42px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:#77829f;
-  font-size:13px;
-}
-footer .links{display:flex;gap:18px}
-footer a{text-decoration:none}
-
-@media(max-width:800px){
-  .nav{padding:0 18px}
-  .nav nav{gap:14px}
-  .nav nav a:nth-child(2){display:none}
-  .game,.split{grid-template-columns:1fr;gap:35px}
-  .feature-grid{grid-template-columns:1fr 1fr}
-  .contact-strip{display:block}
-  .contact-actions{margin-top:25px}
-}
-@media(max-width:560px){
-  .nav nav{display:none}
-  .hero{min-height:620px;padding-top:72px}
-  .hero h1{font-size:46px}
-  .intro{font-size:16px}
-  .actions{width:100%;max-width:330px}
-  .store-link,.support-link{width:100%}
-  .store-link img{width:205px}
-  .store-grid,.feature-grid{grid-template-columns:1fr}
-  .store-card{flex-wrap:wrap}
-  .store-card img{width:180px;flex-basis:180px}
-  footer{display:block}
-  footer .links{margin-top:15px}
-}
-
-/* ---- Games & Software grid ---- */
-.games-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  margin-top:30px;
-}
-.game-card{
-  display:flex;
-  gap:22px;
-  align-items:center;
-  padding:26px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:var(--card);
-  text-decoration:none;
-  transition:.2s ease;
-}
-.game-card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(94,231,255,.45);
-  background:rgba(255,255,255,.065);
-}
-.game-card .icon{
-  width:92px;height:92px;
-  border-radius:22px;
-  object-fit:cover;
-  flex:0 0 92px;
-  box-shadow:0 12px 30px rgba(0,0,0,.35);
-}
-.game-card .meta b{font-size:19px; letter-spacing:-.01em;}
-.game-card .meta .sub{
-  display:block; margin-top:5px;
-  color:var(--cyan); font-size:11px; font-weight:800; letter-spacing:.14em;
-}
-.game-card .meta p{font-size:14px; margin:8px 0 0;}
-.game-card .mini-links{display:flex; gap:14px; margin-top:12px; flex-wrap:wrap;}
-.game-card .mini-links a{
-  font-size:11px; font-weight:800; letter-spacing:.08em;
-  color:#94a3b8; text-decoration:none;
-}
-.game-card .mini-links a:hover{color:var(--cyan);}
-@media(max-width:800px){ .games-grid{grid-template-columns:1fr;} }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="nav">
-  <a class="brand" href="index.html">
-    <span class="mark">C</span>
-    <span>CAULDERON <b>INTERACTIVE</b></span>
-  </a>
-  <nav>
-    <a href="#games">Games</a>
-    <a href="#game">Game</a>
-    <a href="#stores">Stores</a>
-    <a href="#about">About</a>
-    <a href="support.html">Support</a>
-  </nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">C</span>
+      <span class="brand-word">CAULDERON <b>INTERACTIVE</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#games">Titles</a>
+      <a href="#craft">Craft</a>
+      <a href="#about">About</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-<section class="hero">
-  <img class="hero-logo" src="icon.png" width="112" height="112" alt="Number Run: Pro Edition app icon">
-  <div class="eyebrow">CAULDERON INTERACTIVE PRESENTS</div>
-  <h1>NUMBER RUN:<br><span>PRO EDITION</span></h1>
-  <div class="tagline">THINK FAST. RUN FASTER.</div>
-  <p class="intro">A fast-paced number challenge built for quick thinking, sharp decisions, and one-more-run energy.</p>
+<main id="main">
 
-  <div class="actions">
-    <a class="store-link" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener" aria-label="Get Number Run on Google Play">
-      <img src="assets/google-play.png" alt="Get it on Google Play">
-    </a>
-    <a class="store-link" href="#ios-coming-soon" aria-label="Number Run on the App Store — coming soon">
-      <img src="assets/app-store.png" alt="Download on the App Store — coming soon">
-    </a>
-    <a class="support-link" href="support.html">Player support</a>
-  </div>
-</section>
-
-<section id="game" class="section game">
-  <div>
-    <div class="label">THE GAME</div>
-    <h2>Number Run: Pro Edition</h2>
-    <p>Make split-second choices, build combos, collect Coins, unlock content, and push your run further. Number Run: Pro Edition is designed as a focused, replayable arcade experience.</p>
-    <div class="platform-pills">
-      <a class="pill" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener">
-        <img src="assets/google-play.png" alt=""> AVAILABLE NOW ON GOOGLE PLAY
-      </a>
-      <a class="pill" href="#ios-coming-soon">
-        <img src="assets/app-store.png" alt=""> iOS — COMING SOON
-      </a>
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <span class="hero-tag"><span class="mark">C</span> Caulderon Interactive presents</span>
+      <h1>NUMBER RUN<br><span class="accent">PRO EDITION</span></h1>
+      <p class="hero-tagline">Think fast. Run faster.</p>
+      <p class="lede">A fast-paced number challenge built around split-second decisions. Build combos, collect coins, unlock achievements, and push every run a little further than the last.</p>
+      <div class="hero-actions">
+        <div class="store-row">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.numberrun.pro" target="_blank" rel="noopener" aria-label="Get Number Run: Pro Edition on Google Play">
+            <img src="assets/google-play.png" alt="Get it on Google Play">
+          </a>
+          <a class="store-badge is-disabled" href="#" aria-disabled="true" tabindex="-1" aria-label="Number Run on the App Store — coming soon">
+            <img src="assets/app-store.png" alt="Download on the App Store — coming soon">
+          </a>
+        </div>
+        <span class="store-note">Free to play, with an optional one-time Remove Ads purchase.</span>
+      </div>
     </div>
-  </div>
-  <div class="game-panel">
-    <img class="panel-logo" src="icon.png" width="150" height="150" alt="Number Run: Pro Edition logo">
-  </div>
-</section>
+  </section>
 
+  <section id="games" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Three games, one small studio.</h2>
+        <p>Each title is designed, built, and shipped independently — its own mechanics, its own palette, its own mood. Pick one below for its full page and legal documents.</p>
+      </div>
 
+      <div class="games-grid">
 
-<section id="games" class="section">
-  <div class="label">GAMES &amp; SOFTWARE</div>
-  <h2>Our titles</h2>
-  <p>Everything we ship is built around the same idea: clear design, responsive feel, and an experience that's easy to pick up. Pick a title below for its dedicated page and legal documents.</p>
-  <div class="games-grid">
-    <a class="game-card" href="index.html#game">
-      <img class="icon" src="icon.png" alt="Number Run: Pro Edition icon">
-      <div class="meta">
-        <b>Number Run: Pro Edition</b>
-        <span class="sub">ARCADE · AVAILABLE NOW</span>
-        <p>Think fast, run faster — split-second number choices, combos, Coins and one-more-run energy.</p>
-        <div class="mini-links">
-          <a href="privacy.html">PRIVACY</a>
-          <a href="terms.html">TERMS</a>
-          <a href="support.html">SUPPORT</a>
+        <article class="game-card nr">
+          <div class="game-card-top">
+            <img class="icon" src="icon.png" alt="Number Run: Pro Edition icon" width="64" height="64">
+            <div>
+              <div class="game-card-genre">ARCADE</div>
+              <h3 class="game-card-title">Number Run: Pro Edition</h3>
+            </div>
+          </div>
+          <p class="pitch">Split-second number choices, cascading combos, and one-more-run energy. Our first title, and still the flagship.</p>
+          <span class="chip is-live"><span class="dot"></span>Available on Google Play</span>
+          <a class="game-card-cta" href="#top">See Number Run</a>
+          <div class="game-card-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+          </div>
+        </article>
+
+        <article class="game-card tm">
+          <div class="game-card-top">
+            <svg class="icon" viewBox="0 0 120 120" role="img" aria-label="Tilt Maze icon" width="64" height="64">
+              <defs>
+                <radialGradient id="tmBgH" cx="35%" cy="30%" r="90%">
+                  <stop offset="0%" stop-color="#101a3f"/><stop offset="100%" stop-color="#05070d"/>
+                </radialGradient>
+                <radialGradient id="tmBallH" cx="35%" cy="30%" r="80%">
+                  <stop offset="0%" stop-color="#e0f7ff"/><stop offset="100%" stop-color="#22d3ee"/>
+                </radialGradient>
+                <radialGradient id="tmGoalH" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fff7d6"/><stop offset="100%" stop-color="#fbbf24"/>
+                </radialGradient>
+              </defs>
+              <rect width="120" height="120" rx="26" fill="url(#tmBgH)"/>
+              <g stroke="#a78bfa" stroke-width="5" stroke-linecap="round">
+                <path d="M18 18 H62 V62"/>
+                <path d="M18 62 H40 V102"/>
+                <path d="M62 40 H102 V84"/>
+                <path d="M84 62 V102"/>
+              </g>
+              <circle cx="84" cy="26" r="10" fill="url(#tmGoalH)"/>
+              <circle cx="88" cy="92" r="9" fill="#450a1a" stroke="#9f1239" stroke-width="3"/>
+              <circle cx="30" cy="90" r="10" fill="url(#tmBallH)"/>
+              <circle cx="26.5" cy="86" r="2.4" fill="#ffffff" opacity=".9"/>
+            </svg>
+            <div>
+              <div class="game-card-genre" style="color:var(--tm)">PUZZLE</div>
+              <h3 class="game-card-title">Tilt Maze</h3>
+            </div>
+          </div>
+          <p class="pitch">Roll a ball through hand-crafted mazes by tilting your phone. Dodge pits, chase gold-star times.</p>
+          <span class="chip is-soon"><span class="dot"></span>Coming soon</span>
+          <a class="game-card-cta" href="tiltmaze.html" style="--accent:var(--tm)">See Tilt Maze</a>
+          <div class="game-card-links">
+            <a href="tiltmaze-privacy.html">Privacy</a>
+            <a href="tiltmaze-terms.html">Terms</a>
+            <a href="tiltmaze-support.html">Support</a>
+          </div>
+        </article>
+
+        <article class="game-card bc">
+          <div class="game-card-top">
+            <svg class="icon" viewBox="0 0 120 120" role="img" aria-label="Block Chakra icon" width="64" height="64">
+              <defs>
+                <radialGradient id="bcBgH" cx="35%" cy="28%" r="90%">
+                  <stop offset="0%" stop-color="#241226"/><stop offset="100%" stop-color="#0a0710"/>
+                </radialGradient>
+              </defs>
+              <rect width="120" height="120" rx="26" fill="url(#bcBgH)"/>
+              <g>
+                <rect x="62" y="16" width="30" height="30" rx="8" fill="#F43F5E"/>
+                <rect x="62" y="16" width="30" height="30" rx="8" fill="#FBBF24" transform="rotate(90 60 60)"/>
+                <rect x="62" y="16" width="30" height="30" rx="8" fill="#4ADE80" transform="rotate(180 60 60)"/>
+                <rect x="62" y="16" width="30" height="30" rx="8" fill="#67E8F9" transform="rotate(270 60 60)"/>
+              </g>
+              <circle cx="60" cy="60" r="13" fill="#0a0710" stroke="#FF6F91" stroke-width="4"/>
+              <path d="M60 51 l5 6 h-4 v6 h-2 v-6 h-4 z" fill="#FF6F91"/>
+            </svg>
+            <div>
+              <div class="game-card-genre" style="color:var(--bc)">PUZZLE</div>
+              <h3 class="game-card-title">Block Chakra</h3>
+            </div>
+          </div>
+          <p class="pitch">Swipe or tilt to spin gravity in any of four directions. Clear full rows and columns before the board overflows.</p>
+          <span class="chip is-soon"><span class="dot"></span>Coming soon</span>
+          <a class="game-card-cta" href="blockchakra.html" style="--accent:var(--bc)">See Block Chakra</a>
+          <div class="game-card-links">
+            <a href="blockchakra-privacy.html">Privacy</a>
+            <a href="blockchakra-terms.html">Terms</a>
+            <a href="blockchakra-support.html">Support</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="craft" class="section">
+    <div class="container craft">
+      <div class="craft-statement">
+        <h2>Nothing in these games came from a stock library.</h2>
+        <p>Every tile, icon, and background is drawn in code at runtime. Every note of music and every sound effect is synthesized, not sampled. It's a harder way to build a game — and it's the only way we build ours.</p>
+        <a class="btn-link" href="#about">More about the studio</a>
+      </div>
+      <div class="craft-list">
+        <div class="craft-item">
+          <span class="n">01</span>
+          <div><b>Programmatic visuals</b><span>Every tile, icon, and backdrop is drawn on-canvas at runtime — no bitmap art, no stock illustration.</span></div>
+        </div>
+        <div class="craft-item">
+          <span class="n">02</span>
+          <div><b>Synthesized audio</b><span>Music and sound effects are generated as raw waveforms in code, not licensed or sampled from anywhere.</span></div>
+        </div>
+        <div class="craft-item">
+          <span class="n">03</span>
+          <div><b>Store assets, too</b><span>Even our Play Store icons and screenshots are produced with scripts rather than design software.</span></div>
+        </div>
+        <div class="craft-item">
+          <span class="n">04</span>
+          <div><b>Progress stays on-device</b><span>No account is required to play. Scores, coins, and settings live locally on your device.</span></div>
         </div>
       </div>
-    </a>
-    <a class="game-card" href="tiltmaze.html">
-      <svg class="icon" viewBox="0 0 120 120" role="img" aria-label="Tilt Maze icon">
-  <defs>
-    <radialGradient id="tmBgS" cx="35%25" cy="30%25" r="90%25">
-      <stop offset="0%25" stop-color="#101a3f"/><stop offset="100%25" stop-color="#05070d"/>
-    </radialGradient>
-    <radialGradient id="tmBallS" cx="35%25" cy="30%25" r="80%25">
-      <stop offset="0%25" stop-color="#e0f7ff"/><stop offset="100%25" stop-color="#22d3ee"/>
-    </radialGradient>
-    <radialGradient id="tmGoalS" cx="50%25" cy="50%25" r="50%25">
-      <stop offset="0%25" stop-color="#fff7d6"/><stop offset="100%25" stop-color="#fbbf24"/>
-    </radialGradient>
-  </defs>
-  <rect width="120" height="120" rx="26" fill="url(#tmBgS)"/>
-  <g stroke="#a78bfa" stroke-width="5" stroke-linecap="round">
-    <path d="M18 18 H62 V62"/>
-    <path d="M18 62 H40 V102"/>
-    <path d="M62 40 H102 V84"/>
-    <path d="M84 62 V102"/>
-  </g>
-  <circle cx="84" cy="26" r="10" fill="url(#tmGoalS)"/>
-  <circle cx="88" cy="92" r="9" fill="#450a1a" stroke="#9f1239" stroke-width="3"/>
-  <circle cx="30" cy="90" r="10" fill="url(#tmBallS)"/>
-  <circle cx="26.5" cy="86" r="2.4" fill="#ffffff" opacity=".9"/>
-</svg>
-      <div class="meta">
-        <b>Tilt Maze</b>
-        <span class="sub">PUZZLE · COMING SOON</span>
-        <p>Roll a ball through hand-crafted mazes by tilting your phone. Dodge pits, chase gold-star times.</p>
-        <div class="mini-links">
-          <a href="tiltmaze-privacy.html">PRIVACY</a>
-          <a href="tiltmaze-terms.html">TERMS</a>
-          <a href="tiltmaze-support.html">SUPPORT</a>
-        </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container split">
+      <div>
+        <h2>Games &amp; software with purpose.</h2>
       </div>
-    </a>
-  </div>
-</section>
+      <p>Caulderon Interactive is an independent studio building focused, replayable mobile games. We favor clear design and responsive feel over noise — small teams, small scopes, and games that are easy to pick up and hard to put down.</p>
+    </div>
+  </section>
 
-<section id="about" class="section split">
-  <div><div class="label">ABOUT CAULDERON INTERACTIVE</div><h2>Games &amp; software with purpose.</h2></div>
-  <p>Caulderon Interactive creates games and software with an emphasis on clear design, responsive experiences, and products that are easy to understand and enjoyable to use.</p>
-</section>
+  <section class="section">
+    <div class="container contact-strip">
+      <div><h2>Need help, or want to work together?</h2></div>
+      <div class="contact-actions">
+        <a href="mailto:support.caulderoninteractive@gmail.com">Player support</a>
+        <a href="mailto:caulderoninteractive@gmail.com">Business enquiries</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section features">
-  <div class="label">NUMBER RUN: PRO EDITION</div>
-  <h2>What's inside</h2>
-  <div class="feature-grid">
-    <div class="feature"><b>Fast gameplay</b><p>Short, focused runs built around quick decisions and escalating challenge.</p></div>
-    <div class="feature"><b>Progression</b><p>Scores, Coins, achievements, settings and other progression are stored locally on your device.</p></div>
-    <div class="feature"><b>In-game shop</b><p>Buy consumable Coin Packs and Combo Bundles that can include Coins, permanent cosmetics or worlds, sound packs and Remove Ads where offered.</p></div>
-    <div class="feature"><b>Optional purchases</b><p>Google Play Billing processes consumable Coin Packs and Combo Bundles, plus the one-time non-consumable Remove Ads purchase.</p></div>
-    <div class="feature"><b>Advertising</b><p>Banner, interstitial and optional rewarded video ads are provided through Google AdMob. Remove Ads does not disable voluntary rewarded videos.</p></div>
-    <div class="feature"><b>Privacy controls</b><p>Advertising consent can be reviewed through Privacy Options where applicable, while comeback reminders are generated locally on-device.</p></div>
-  </div>
-</section>
-
-<section class="section contact-strip">
-  <div><div class="label">CONTACT</div><h2>Need help or want to work together?</h2></div>
-  <div class="contact-actions">
-    <a href="mailto:support.caulderoninteractive@gmail.com">Player support</a>
-    <a href="mailto:caulderoninteractive@gmail.com">Business enquiries</a>
-  </div>
-</section>
 </main>
 
-<footer>
-  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
-  <div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="brand"><span class="mark">C</span><span class="brand-word">CAULDERON <b>INTERACTIVE</b></span></div>
+      <p>An independent studio building focused, replayable mobile games — designed, coded, and scored in-house.</p>
+    </div>
+    <div class="footer-col">
+      <b>Number Run</b>
+      <ul>
+        <li><a href="index.html#top">Overview</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <b>Tilt Maze</b>
+      <ul>
+        <li><a href="tiltmaze.html">Overview</a></li>
+        <li><a href="tiltmaze-privacy.html">Privacy</a></li>
+        <li><a href="tiltmaze-terms.html">Terms</a></li>
+        <li><a href="tiltmaze-support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <b>Block Chakra</b>
+      <ul>
+        <li><a href="blockchakra.html">Overview</a></li>
+        <li><a href="blockchakra-privacy.html">Privacy</a></li>
+        <li><a href="blockchakra-terms.html">Terms</a></li>
+        <li><a href="blockchakra-support.html">Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+    <div>support.caulderoninteractive@gmail.com</div>
+  </div>
 </footer>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
