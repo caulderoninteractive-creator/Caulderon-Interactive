@@ -1,8 +1,7 @@
-# Caulderon Interactive — website (v2)
-
+# Caulderon Interactive 
 A full rebuild of the site as a studio-level presence: the homepage is now
 about **Caulderon Interactive** the studio, and every title — Number Run:
-Pro Edition, Tilt Maze, Block Chakra, and NetPrepQuiz — has its own overview
+Pro Edition, Tilt Maze, Block Chakra, and MeritNiti: Exam Practice — has its own overview
 page plus dedicated Privacy, Terms, Support, and Copyright &amp; Licenses
 pages. One shared stylesheet (`site.css`) and script (`script.js`) drive the
 whole site.
@@ -53,8 +52,8 @@ tiltmaze-privacy.html / -terms.html / -support.html / -copyright.html
 blockchakra.html              Block Chakra overview (coming soon)
 blockchakra-privacy.html / -terms.html / -support.html / -copyright.html
 
-netprepquiz.html              NetPrepQuiz overview (in development)
-netprepquiz-privacy.html / -terms.html / -support.html / -copyright.html
+MeritNiti: Exam Practice.html              MeritNiti: Exam Practice overview (in development)
+MeritNiti: Exam Practice-privacy.html / -terms.html / -support.html / -copyright.html
 
 devlog/                       Number Run's existing build-notes blog,
                                restyled to match, content unchanged
@@ -75,7 +74,7 @@ If you do change domains, you'll still need to update the Privacy Policy
 URL field in Google Play Console to point at the new domain — that's
 unavoidable when moving off GitHub Pages regardless of file paths.
 
-## About NetPrepQuiz
+## About MeritNiti: Exam Practice
 
 I didn't have details on this title beyond its name, so I've drafted it as
 a general exam/certification-prep quiz app, in the same visual and
@@ -91,7 +90,7 @@ Privacy Policy and Terms accordingly.
 - One token system in `site.css` drives color, spacing, and type across
   every page — extending the palette you already had (Number Run cyan,
   Tilt Maze purple, Block Chakra pink) with a new green/blue pairing for
-  NetPrepQuiz.
+  MeritNiti: Exam Practice.
 - Mobile navigation now has a working hamburger menu (previously the nav
   links simply disappeared under ~760px with no alternative).
 - Subtle scroll-reveal animations respect `prefers-reduced-motion` and
