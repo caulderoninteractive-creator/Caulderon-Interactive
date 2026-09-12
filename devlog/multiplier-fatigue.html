@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#070B20">
+<meta name="theme-color" content="#06070d">
 <meta name="description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
 <title>Multiplier Fatigue: fixing runaway scores without nerfing the fun part — Devlog</title>
-<link rel="canonical" href="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/multiplier-fatigue.html">
+<link rel="canonical" href="https://caulderoninteractive.com/devlog/multiplier-fatigue.html">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -14,18 +14,26 @@
 <meta property="og:site_name" content="Caulderon Interactive">
 <meta property="og:title" content="Multiplier Fatigue: fixing runaway scores without nerfing the fun part">
 <meta property="og:description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
-<meta property="og:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
-<meta property="og:url" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/devlog/multiplier-fatigue.html">
+<meta property="og:image" content="https://caulderoninteractive.com/icon.png">
+<meta property="og:url" content="https://caulderoninteractive.com/devlog/multiplier-fatigue.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Multiplier Fatigue: fixing runaway scores without nerfing the fun part">
-<meta name="twitter:description" content="How Number Run: Pro Edition stopped chained multiply gates from producing runaway exponential scores, without changing what any single gate does.">
-<meta name="twitter:image" content="https://caulderoninteractive-creator.github.io/Caulderon-Interactive/icon.png">
-<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="../index.html"><span class="mark">C</span><span>CAULDERON <b>INTERACTIVE</b></span></a>
-  <nav><a href="../index.html#game">Game</a><a href="../index.html#about">About</a><a href="index.html">Devlog</a><a href="../support.html">Support</a></nav>
+  <div class="nav-inner">
+    <a class="brand" href="../index.html"><span class="mark">C</span><span class="brand-word">CAULDERON <b>INTERACTIVE</b></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../numberrun.html">Number Run</a>
+      <a href="index.html">Devlog</a>
+      <a href="../about.html">About</a>
+      <a href="../support.html">Support</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
 </header>
 <main class="legal devlog-post">
 <div class="label">DEVLOG · GAME DESIGN</div>
@@ -58,9 +66,11 @@
 
 <a class="devlog-back" href="index.html">← Back to Devlog</a>
 </main>
-<footer>
-  <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
-  <div class="links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></div>
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <div>© <span id="year"></span> Caulderon Interactive. All rights reserved.</div>
+    <div><a href="../numberrun.html">Number Run</a> · <a href="../index.html">All games</a></div>
+  </div>
 </footer>
 <script src="../script.js"></script>
 </body>
