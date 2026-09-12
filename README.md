@@ -37,11 +37,13 @@ script (`script.js`) drive the whole site.
    `caulderoninteractive.com` across every `.html` file. Internal links
    between pages are all relative, so nothing else needs to change.
 
-2. **Copy your real image assets across.** This bundle does not include
-   binary image files. Copy these from your current repo into the same
-   filenames/locations here:
-   - `icon.png`, `favicon.png`, `favicon-32.png`, `apple-touch-icon.png` (site root)
+2. **Copy your remaining image assets across.** Real icons for Tilt Maze,
+   Block Chakra, and MeritNiti are now included in this bundle
+   (`tiltmaze-icon.png`, `blockchakra-icon.png`, `meritniti-icon.png`) — you
+   don't need to supply those. Still missing (I don't have the source art):
+   - `icon.png`, `favicon.png`, `favicon-32.png`, `apple-touch-icon.png` (site root — Number Run/studio icon)
    - `assets/google-play.png`, `assets/app-store.png` (store badges)
+   - Ashen Crown doesn't have real artwork yet, so it still uses a placeholder inline icon.
 
 3. **Add a `CNAME` file** (custom domain on GitHub Pages only) once you
    know your domain, containing just the domain name, then point DNS at
@@ -88,26 +90,44 @@ their existing root-level paths — only the visual design changed. You'll
 still need to update the Privacy Policy URL field in Google Play Console
 once you move to the new domain, regardless of file paths.
 
-## About MeritNiti and Ashen Crown
+## MeritNiti: Exam Practice — now built from the real product description
 
-Both are early — I only had a name and (for MeritNiti) a rough sense of
-"exam practice" to go on, so:
+MeritNiti's overview page, and its Privacy/Terms/Copyright pages, have been
+rewritten using the real product description you provided: answer-specific
+(distractor-level) feedback, misconception tags, Smart Revision, growing
+question-bank content packs, offline practice, bookmarking, and an
+exam-booklet style interface. The "Independent preparation app" disclaimer
+(no official affiliation with UPSC/SSC/NTA/RRB/IBPS/State PSCs/etc.) appears
+on the overview page and as its own "No Official Affiliation" section in
+the Terms of Use — reproduced closely since it's your own first-party
+legal disclaimer, not third-party content.
 
-- **MeritNiti: Exam Practice** is framed as a general competitive-exam
-  practice app: timed sets, instant scoring, topic organization. No
-  specific exam is named anywhere.
-- **Ashen Crown: Oath of Greyfen** is framed as a dark fantasy
-  adventure/RPG (exploration, tactical battles, a story built around an
-  oath), since that's what the title evokes — but genre, mechanics, and
-  currency name ("Sigils") are my best guess, clearly marked as drafts.
+Real icons are now used for Tilt Maze, Block Chakra, and MeritNiti
+throughout the site (see "Real icons now included," below). Status was
+upgraded from "In development" to "Coming soon" given how finished this
+description reads — change it back on `meritniti.html` and its cross-promo
+cards elsewhere if that's premature. The MeritNiti WhatsApp channel is
+linked from its hero, its Support page, and the homepage/About footer.
 
-Both titles' Privacy Policy, Terms of Use, and Copyright pages are
-explicitly labeled as drafts describing *planned* behavior (no accounts,
-local-only storage, the same AdMob/Play Billing pattern as the shipped
-titles), following the same structure as the existing apps' legal
-documents. Once you can share real specifics — subject focus or genre
-details, whether either will have accounts or a backend, monetization —
-I can tighten the copy and finalize the legal pages accordingly.
+## About Ashen Crown
+
+Ashen Crown is early — I only had the title to go on, so it's framed as a
+dark fantasy adventure/RPG (exploration, tactical battles, a story built
+around an oath), since that's what the name evokes, but genre, mechanics,
+and the currency name ("Sigils") are my best guess, clearly marked as
+drafts throughout its Privacy Policy, Terms of Use, and Copyright pages.
+Once you can share real specifics, I can tighten the copy and finalize the
+legal pages accordingly.
+
+## Real icons now included
+
+`tiltmaze-icon.png`, `blockchakra-icon.png`, and `meritniti-icon.png` are
+your real uploaded artwork, now used as the actual `<img>` icon everywhere
+those titles appear — their own hero banner, the homepage grid, and every
+cross-promo card on other titles' pages. The inline SVG placeholders I'd
+drawn for those three are gone. Ashen Crown still uses a placeholder inline
+SVG (a simple crown mark) since no real art exists for it yet — swap it out
+the same way once you have one.
 
 ## Design notes
 
