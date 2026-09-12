@@ -25,16 +25,3 @@ document.querySelectorAll('.nav-toggle').forEach(function(btn){
     });
   }
 });
-
-// Scroll reveal (progressive enhancement — see html.js in CSS)
-if('IntersectionObserver' in window){
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-}

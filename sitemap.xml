@@ -48,7 +48,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://caulderoninteractive.com/netprepquiz.html</loc>
+    <loc>https://caulderoninteractive.com/meritniti.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://caulderoninteractive.com/ashencrown.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
