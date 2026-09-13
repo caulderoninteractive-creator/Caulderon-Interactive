@@ -1,0 +1,27 @@
+CAULDERON INTERACTIVE — PRODUCTION REPACKAGE AUDIT
+13 September 2026
+
+Production site
+https://caulderoninteractive.com/
+
+Email routing
+support@caulderoninteractive.com — users, app support, bug reports, privacy/contact
+business@caulderoninteractive.com — partnerships, licensing, commercial/press enquiries
+admin@caulderoninteractive.com — account administration, platform ownership, security, registrar/hosting/admin matters
+
+Validation completed
+- 38 HTML files parsed without parser errors.
+- 0 missing internal href/src targets.
+- 0 legacy Gmail addresses.
+- 0 legacy hosting-domain production references.
+- 0 non-production Caulderon domain references.
+- All mailto links use only the three approved addresses above.
+- Privacy and Terms contacts route to support@.
+- Licensing/copyright contacts route to business@.
+- Studio administration/security routes expose admin@.
+- sitemap.xml parses successfully and every production sitemap URL resolves to a packaged file.
+- robots.txt points to https://caulderoninteractive.com/sitemap.xml.
+- Untold Realms book icon is packaged as both untoldrealms-icon.png and untoldrealms-icon-512.png; both are identical 512×512 PNGs with transparent outer corners to avoid unnecessary black edging on the site.
+- Number Run icon.png is present and valid.
+- Master site.css is byte-for-byte unchanged from the supplied IconFix package.
+- Legal-page displayed review/update dates were refreshed to 13 September 2026 where contact details changed.

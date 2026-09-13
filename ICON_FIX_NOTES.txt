@@ -1,15 +1,10 @@
-ASHEN CROWN + UNTOLD REALMS ICON FIX
+ASHEN CROWN + UNTOLD REALMS ICON STATUS
 13 September 2026
 
-Fixed:
-- Homepage now displays ashencrown-icon.png and untoldrealms-icon.png directly.
-- Ashen Crown hero now displays ashencrown-icon.png.
-- Untold Realms hero now displays untoldrealms-icon.png.
-- Cross-promotion cards use the real PNG icons instead of inline SVG placeholders.
-- Ashen Crown and Untold Realms social-preview metadata now points to their corresponding icon PNGs.
-
-Validated:
-- ashencrown-icon.png: valid 512x512 PNG.
-- untoldrealms-icon.png: valid 512x512 PNG.
-- Every new visible RPG icon reference resolves to a file included in the package.
-- site.css SHA-256 remains identical to the original v3 stylesheet.
+- Homepage, heroes and cross-promotion cards use packaged PNG icons.
+- Untold Realms now uses the user-selected closed-book “Untold Realms” artwork.
+- The outer unused black margin was cropped before resizing back to 512×512; the artwork itself was preserved.
+- untoldrealms-icon.png and untoldrealms-icon-512.png are identical 512×512 PNGs.
+- Ashen Crown icon references remain unchanged.
+- Social-preview metadata points to the corresponding production-domain icon URLs.
+- The supplied master site.css remains unchanged.

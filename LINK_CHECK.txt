@@ -1,6 +1,16 @@
-CSS master style check: PASS — site.css is byte-for-byte identical to supplied site v3.
-New missing local targets introduced by RPG update: PASS — none.
-Pre-existing unresolved targets still referenced by supplied v3 pages:
-  assets/app-store.png
-  assets/google-play.png
-  icon.png
+SITE QA CHECK
+13 September 2026
+
+- Production domain: https://caulderoninteractive.com/
+- Legacy Gmail addresses: none
+- Non-production site-domain references: none
+- Internal href/src targets: validated after repackaging
+- Number Run icon.png: included and valid
+- Google Play / App Store badge references: no missing local image dependency
+- Ashen Crown and Untold Realms icon references: included and valid
+- Master site.css: preserved byte-for-byte from the supplied IconFix package
+
+Contact routing:
+- support@caulderoninteractive.com — users, app support, bug reports, privacy/contact
+- business@caulderoninteractive.com — partnerships, licensing, commercial/press enquiries
+- admin@caulderoninteractive.com — account administration, platform ownership, security, registrar/hosting/admin matters
