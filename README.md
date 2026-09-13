@@ -1,4 +1,4 @@
-# Caulderon Interactive — website (v3)
+# Caulderon Interactive 
 
 The studio homepage plus a dedicated overview + legal suite for every title:
 Number Run: Pro Edition, Tilt Maze, Block Chakra, MeritNiti: Exam Practice,
@@ -111,23 +111,19 @@ linked from its hero, its Support page, and the homepage/About footer.
 
 ## About Ashen Crown
 
-Ashen Crown is early — I only had the title to go on, so it's framed as a
+Ashen Crown is early —  so it's framed as a
 dark fantasy adventure/RPG (exploration, tactical battles, a story built
 around an oath), since that's what the name evokes, but genre, mechanics,
 and the currency name ("Sigils") are my best guess, clearly marked as
 drafts throughout its Privacy Policy, Terms of Use, and Copyright pages.
-Once you can share real specifics, I can tighten the copy and finalize the
-legal pages accordingly.
+
 
 ## Real icons now included
 
 `tiltmaze-icon.png`, `blockchakra-icon.png`, and `meritniti-icon.png` are
 your real uploaded artwork, now used as the actual `<img>` icon everywhere
 those titles appear — their own hero banner, the homepage grid, and every
-cross-promo card on other titles' pages. The inline SVG placeholders I'd
-drawn for those three are gone. Ashen Crown still uses a placeholder inline
-SVG (a simple crown mark) since no real art exists for it yet — swap it out
-the same way once you have one.
+cross-promo card on other titles' pages. 
 
 ## Design notes
 
@@ -141,5 +137,5 @@ the same way once you have one.
 
 ## Contacts
 
-- Business: caulderoninteractive@gmail.com
-- Player support: support.caulderoninteractive@gmail.com
+- Business: business@caulderoninteractive.com
+- Player support: support@caulderoninteractive.com
