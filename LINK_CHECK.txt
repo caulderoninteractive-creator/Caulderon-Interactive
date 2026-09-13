@@ -1,0 +1,6 @@
+CSS master style check: PASS — site.css is byte-for-byte identical to supplied site v3.
+New missing local targets introduced by RPG update: PASS — none.
+Pre-existing unresolved targets still referenced by supplied v3 pages:
+  assets/app-store.png
+  assets/google-play.png
+  icon.png
