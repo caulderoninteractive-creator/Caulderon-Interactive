@@ -1,4 +1,4 @@
-# Caulderon Interactive 
+# Caulderon Interactive — website (v4)
 
 The studio homepage plus a dedicated overview + legal suite for every title:
 Number Run: Pro Edition, Tilt Maze, Block Chakra, MeritNiti: Exam Practice,
@@ -6,6 +6,17 @@ and Ashen Crown: Oath of Greyfen. One shared stylesheet (`site.css`) and
 script (`script.js`) drive the whole site.
 
 ## What changed in this revision
+
+- **Domain finalized.** Every canonical link, Open Graph tag, and email
+  address now points at the real `caulderoninteractive.com` — nothing left
+  to find-and-replace.
+- **Contact addresses split three ways** — `support@`, `business@`, and
+  `admin@` — routed by purpose across every page. See "Contact addresses"
+  below for exactly what goes where.
+- Added `.well-known/security.txt` pointing security researchers at
+  `admin@caulderoninteractive.com`.
+
+### Carried over from the previous revision
 
 - **Fixed a real bug, not just styling.** The previous version used a
   scroll-triggered "fade content in as you scroll" effect. It relied on
@@ -28,16 +39,13 @@ script (`script.js`) drive the whole site.
 - Every "More from Caulderon Interactive" cross-promo grid, the homepage
   games grid, the About page's titles grid, and both multi-column footers
   now list all five titles.
+- Real icons swapped in for Tilt Maze, Block Chakra, and MeritNiti.
+- MeritNiti's content rewritten from the real product description you
+  provided (diagnostic feedback, misconception tags, Smart Revision, etc.).
 
-## Before you upload this anywhere — three things to do first
+## Before you upload this anywhere — two things to do first
 
-1. **Replace the placeholder domain.** Every canonical link and Open Graph
-   tag points to `https://caulderoninteractive.com/` as a placeholder.
-   Once you own a real domain, find-and-replace
-   `caulderoninteractive.com` across every `.html` file. Internal links
-   between pages are all relative, so nothing else needs to change.
-
-2. **Copy your remaining image assets across.** Real icons for Tilt Maze,
+1. **Copy your remaining image assets across.** Real icons for Tilt Maze,
    Block Chakra, and MeritNiti are now included in this bundle
    (`tiltmaze-icon.png`, `blockchakra-icon.png`, `meritniti-icon.png`) — you
    don't need to supply those. Still missing (I don't have the source art):
@@ -45,9 +53,13 @@ script (`script.js`) drive the whole site.
    - `assets/google-play.png`, `assets/app-store.png` (store badges)
    - Ashen Crown doesn't have real artwork yet, so it still uses a placeholder inline icon.
 
-3. **Add a `CNAME` file** (custom domain on GitHub Pages only) once you
-   know your domain, containing just the domain name, then point DNS at
-   GitHub Pages per their custom-domain instructions.
+2. **Add a `CNAME` file** (custom domain on GitHub Pages only) containing
+   just `caulderoninteractive.com`, then point DNS at GitHub Pages per
+   their custom-domain instructions. If you're hosting elsewhere, this
+   step doesn't apply.
+
+Every canonical link, Open Graph tag, and email address across the site
+now points at `caulderoninteractive.com` — no more placeholder domain.
 
 ## Structure
 
@@ -111,19 +123,23 @@ linked from its hero, its Support page, and the homepage/About footer.
 
 ## About Ashen Crown
 
-Ashen Crown is early —  so it's framed as a
+Ashen Crown is early — I only had the title to go on, so it's framed as a
 dark fantasy adventure/RPG (exploration, tactical battles, a story built
 around an oath), since that's what the name evokes, but genre, mechanics,
 and the currency name ("Sigils") are my best guess, clearly marked as
 drafts throughout its Privacy Policy, Terms of Use, and Copyright pages.
-
+Once you can share real specifics, I can tighten the copy and finalize the
+legal pages accordingly.
 
 ## Real icons now included
 
 `tiltmaze-icon.png`, `blockchakra-icon.png`, and `meritniti-icon.png` are
 your real uploaded artwork, now used as the actual `<img>` icon everywhere
 those titles appear — their own hero banner, the homepage grid, and every
-cross-promo card on other titles' pages. 
+cross-promo card on other titles' pages. The inline SVG placeholders I'd
+drawn for those three are gone. Ashen Crown still uses a placeholder inline
+SVG (a simple crown mark) since no real art exists for it yet — swap it out
+the same way once you have one.
 
 ## Design notes
 
@@ -135,7 +151,25 @@ cross-promo card on other titles' pages.
   Number Run.
 - Every legal document uses the same sidebar-table-of-contents layout.
 
-## Contacts
+## Contact addresses
 
-- Business: business@caulderoninteractive.com
-- Player support: support@caulderoninteractive.com
+The site now uses three separate `@caulderoninteractive.com` addresses,
+routed by purpose:
+
+- **support@caulderoninteractive.com** — player-facing: app support, bug
+  reports, and the contact link on every Privacy Policy, Terms of Use, and
+  Support page.
+- **business@caulderoninteractive.com** — partnerships, licensing, and
+  commercial/press enquiries: the "Business enquiries" links on the
+  homepage/About/footer, and every Copyright & Licenses page's licensing
+  contact (since that's fundamentally a licensing question).
+- **admin@caulderoninteractive.com** — account administration, platform
+  ownership, security, and registrar/hosting matters. This one isn't
+  surfaced anywhere in the page content (it's not something a player or
+  press contact would need), but it is wired up as the contact in
+  `.well-known/security.txt`, so security researchers who go looking for
+  a disclosure contact will find it there.
+
+Make sure all three addresses actually exist and are monitored before
+this goes live — a `mailto:` link to a dead inbox is worse than no link.
+
