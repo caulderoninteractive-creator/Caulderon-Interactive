@@ -1,0 +1,5 @@
+Contact: mailto:admin@caulderoninteractive.com
+Contact: mailto:support@caulderoninteractive.com
+Canonical: https://caulderoninteractive.com/.well-known/security.txt
+Expires: 2027-09-13T00:00:00Z
+Preferred-Languages: en
