@@ -1,8 +1,8 @@
-# Caulderon Interactive — website (v4)
+# Caulderon Interactive
 
 The studio homepage plus a dedicated overview + legal suite for every title:
 Number Run: Pro Edition, Tilt Maze, Block Chakra, MeritNiti: Exam Practice,
-and Ashen Crown: Oath of Greyfen. One shared stylesheet (`site.css`) and
+Ashen Crown: Oath of Greyfen, and Untold Realms. One shared stylesheet (`site.css`) and
 script (`script.js`) drive the whole site.
 
 ## What changed in this revision
@@ -123,13 +123,15 @@ linked from its hero, its Support page, and the homepage/About footer.
 
 ## About Ashen Crown
 
-Ashen Crown is early — I only had the title to go on, so it's framed as a
+Ashen Crown is early, so it's framed as a
 dark fantasy adventure/RPG (exploration, tactical battles, a story built
 around an oath), since that's what the name evokes, but genre, mechanics,
 and the currency name ("Sigils") are my best guess, clearly marked as
 drafts throughout its Privacy Policy, Terms of Use, and Copyright pages.
-Once you can share real specifics, I can tighten the copy and finalize the
-legal pages accordingly.
+
+## About Untold Realms
+
+As the name suggests, it's a text based RPG.
 
 ## Real icons now included
 
