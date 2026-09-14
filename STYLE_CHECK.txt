@@ -1,2 +1,3 @@
-Original site.css preserved exactly: True
-SHA256: 7f8f7766ec27166faf31ffe1ea454ab2317026ccdb131c9af7fcf39bec392144
+Original site.css SHA256: 993bdf2b3f31434c73c61e525da64ea97e5c5d553a4d449511947d75d5358b53
+Updated site.css SHA256:  f344f2dda98148b47d0f2df0a0084adab0e6f447eb858b513304c6390b2dc4e1
+Original rules preserved: yes; MeritNiti jobs styles appended only.

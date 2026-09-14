@@ -1,0 +1,537 @@
+--- original/meritniti.html
++++ updated/meritniti.html
+@@ -5,11 +5,11 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#06070d">
+ <title>MeritNiti: Exam Practice — Caulderon Interactive</title>
+-<meta name="description" content="MeritNiti: Exam Practice is an independent competitive-exam practice platform from Caulderon Interactive — diagnostic feedback, misconception tracking, and Smart Revision, built for offline study.">
++<meta name="description" content="MeritNiti is an independent competitive-exam platform from Caulderon Interactive — diagnostic practice, Smart Revision, and verified government-job and major exam updates from official sources.">
+ <link rel="canonical" href="https://caulderoninteractive.com/meritniti.html">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="MeritNiti: Exam Practice — Caulderon Interactive">
+-<meta property="og:description" content="Strategy behind every selection. An independent competitive-exam practice platform with diagnostic feedback and Smart Revision.">
++<meta property="og:description" content="Strategy behind every selection. Diagnostic exam practice plus verified government-job and major exam updates from official sources.">
+ <meta property="og:image" content="https://caulderoninteractive.com/meritniti-icon.png">
+ <meta name="twitter:card" content="summary">
+ <link rel="icon" type="image/png" href="favicon.png">
+@@ -29,6 +29,7 @@
+     </a>
+     <nav class="nav-links" aria-label="Primary">
+       <a href="index.html#games">All titles</a>
++      <a href="#govt-jobs">Govt job updates</a>
+       <a href="#how-it-works">How it works</a>
+       <a href="meritniti-support.html">Support</a>
+     </nav>
+@@ -52,6 +53,47 @@
+         <span class="chip is-soon"><span class="dot"></span>Coming soon</span>
+         <span class="store-note">Follow progress and get launch updates on the <a class="btn-link" href="https://whatsapp.com/channel/0029VbDxTnQCRs1ir0d2z517" target="_blank" rel="noopener">MeritNiti WhatsApp channel</a>, or <a class="btn-link" href="mailto:support@caulderoninteractive.com?subject=MeritNiti%20updates">email us</a>.</span>
+       </div>
++    </div>
++  </section>
++
++
++  <section id="govt-jobs" class="section mn-updates-section">
++    <div class="container">
++      <div class="mn-updates-head">
++        <div class="section-head">
++          <span class="chip is-live"><span class="dot"></span>Live web service</span>
++          <h2>Government Jobs &amp; Exam Updates</h2>
++          <p>Prominent Indian government recruitment, application windows, and high-value follow-ups for major exams — sourced from official authorities and published only after the scanner's verification checks.</p>
++        </div>
++        <div class="mn-updates-actions">
++          <a class="btn btn-solid" data-meritniti-jobs-link href="/meritniti/jobs/">View all updates</a>
++          <a class="btn btn-outline" href="https://whatsapp.com/channel/0029VbDxTnQCRs1ir0d2z517" target="_blank" rel="noopener">Follow on WhatsApp</a>
++        </div>
++      </div>
++
++      <div id="meritniti-jobs-feed" class="mn-updates-feed" aria-live="polite" aria-busy="true">
++        <div class="mn-update-placeholder">
++          <b>Loading verified updates…</b>
++          <span>The page will show only prominent active vacancies and important follow-ups from tracked exams.</span>
++        </div>
++      </div>
++
++      <div class="mn-update-policy">
++        <div>
++          <b>Official-source first</b>
++          <span>Every published summary links back to the recruiting authority or official notice.</span>
++        </div>
++        <div>
++          <b>Claim-level verification</b>
++          <span>Important facts such as dates and vacancy counts are shown as source-backed only when matching official evidence was retained.</span>
++        </div>
++        <div>
++          <b>Lifecycle follow-ups</b>
++          <span>Major exams can stay on one permanent page through schedules, admit cards, answer keys, results, and other important notices.</span>
++        </div>
++      </div>
++
++      <p class="mn-updates-disclaimer">MeritNiti is independent of government departments and examining authorities. Official notifications, corrigenda, and instructions always prevail over a MeritNiti summary.</p>
+     </div>
+   </section>
+ 
+--- original/site.css
++++ updated/site.css
+@@ -510,3 +510,168 @@
+ ::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.14); border-radius:8px; border:2px solid var(--bg); }
+ ::-webkit-scrollbar-thumb:hover{ background:rgba(255,255,255,.24); }
+ html{ scrollbar-color: rgba(255,255,255,.18) var(--bg); scrollbar-width: thin; }
++
++
++/* ---------- 20. MeritNiti Government Jobs & Exam Updates ---------- */
++#govt-jobs{ scroll-margin-top:88px; }
++.mn-updates-section{
++  position:relative;
++  overflow:hidden;
++  background:
++    radial-gradient(620px 280px at 8% 0%, rgba(var(--mn-rgb),.075), transparent 68%);
++}
++.mn-updates-head{
++  display:flex;
++  align-items:flex-end;
++  justify-content:space-between;
++  gap:30px;
++  margin-bottom:26px;
++}
++.mn-updates-head .section-head{ margin-bottom:0; }
++.mn-updates-head .section-head .chip{ margin-bottom:16px; }
++.mn-updates-actions{ display:flex; gap:12px; flex-wrap:wrap; padding-bottom:2px; }
++
++.mn-updates-feed{
++  display:grid;
++  grid-template-columns:repeat(2,minmax(0,1fr));
++  gap:16px;
++  min-height:132px;
++}
++.mn-update-card{
++  position:relative;
++  display:flex;
++  flex-direction:column;
++  min-width:0;
++  gap:12px;
++  padding:22px;
++  border:1px solid var(--line);
++  border-radius:var(--radius-md);
++  background:
++    linear-gradient(180deg, rgba(var(--mn-rgb),.035), transparent 58%),
++    var(--bg-raise);
++  transition:
++    transform var(--dur) var(--ease),
++    border-color var(--dur) var(--ease),
++    box-shadow var(--dur) var(--ease);
++}
++.mn-update-card:hover{
++  transform:translateY(-3px);
++  border-color:rgba(var(--mn-rgb),.4);
++  box-shadow:0 20px 42px -24px rgba(var(--mn-rgb),.35);
++}
++.mn-update-top{
++  display:flex;
++  align-items:center;
++  justify-content:space-between;
++  gap:12px;
++}
++.mn-update-kind{
++  color:var(--mn);
++  font-size:11px;
++  line-height:1.3;
++  font-weight:800;
++  text-transform:uppercase;
++  letter-spacing:.07em;
++}
++.mn-update-verified{
++  display:inline-flex;
++  align-items:center;
++  gap:6px;
++  color:#c9fbe8;
++  font-size:11px;
++  font-weight:700;
++  white-space:nowrap;
++}
++.mn-update-verified::before{
++  content:"";
++  width:6px;
++  height:6px;
++  border-radius:50%;
++  background:var(--mn);
++  box-shadow:0 0 0 3px rgba(var(--mn-rgb),.12);
++}
++.mn-update-card h3{
++  font-size:1.08rem;
++  line-height:1.35;
++  overflow-wrap:anywhere;
++}
++.mn-update-card .mn-update-org{
++  color:var(--muted);
++  font-size:13.5px;
++  line-height:1.55;
++}
++.mn-update-meta{
++  display:flex;
++  flex-wrap:wrap;
++  gap:8px 12px;
++  margin-top:auto;
++  padding-top:12px;
++  border-top:1px solid var(--line);
++  color:var(--muted-2);
++  font-size:12px;
++}
++.mn-update-meta strong{ color:var(--ink-dim); font-weight:700; }
++
++.mn-update-placeholder,
++.mn-update-empty,
++.mn-update-error{
++  grid-column:1 / -1;
++  display:flex;
++  flex-direction:column;
++  justify-content:center;
++  gap:6px;
++  min-height:128px;
++  padding:22px;
++  border:1px dashed var(--line-strong);
++  border-radius:var(--radius-md);
++  color:var(--muted);
++  background:rgba(255,255,255,.018);
++}
++.mn-update-placeholder b,
++.mn-update-empty b,
++.mn-update-error b{ color:var(--ink); }
++.mn-update-error a{ color:var(--mn); font-weight:700; }
++
++.mn-update-policy{
++  display:grid;
++  grid-template-columns:repeat(3,1fr);
++  gap:1px;
++  margin-top:22px;
++  overflow:hidden;
++  border:1px solid var(--line);
++  border-radius:var(--radius-md);
++  background:var(--line);
++}
++.mn-update-policy > div{
++  padding:18px;
++  background:var(--bg-raise);
++}
++.mn-update-policy b{
++  display:block;
++  color:var(--ink);
++  font-size:13px;
++  margin-bottom:5px;
++}
++.mn-update-policy span{
++  display:block;
++  color:var(--muted);
++  font-size:12.5px;
++  line-height:1.6;
++}
++.mn-updates-disclaimer{
++  margin-top:16px;
++  color:var(--muted-2);
++  font-size:12.5px;
++  line-height:1.7;
++  max-width:88ch;
++}
++
++@media (max-width:900px){
++  .mn-updates-head{ align-items:flex-start; flex-direction:column; }
++  .mn-update-policy{ grid-template-columns:1fr; }
++}
++@media (max-width:720px){
++  .mn-updates-feed{ grid-template-columns:1fr; }
++  .mn-updates-actions{ width:100%; }
++  .mn-updates-actions .btn{ flex:1 1 220px; }
++}
+--- original/script.js
++++ updated/script.js
+@@ -25,3 +25,186 @@
+     });
+   }
+ });
++
++
++// MeritNiti — Government Jobs & Exam Updates
++(function(){
++  var host = document.getElementById('meritniti-jobs-feed');
++  var allLinks = document.querySelectorAll('[data-meritniti-jobs-link]');
++  if(!host && !allLinks.length) return;
++
++  function jobsBasePath(){
++    var name = (window.location.hostname || '').toLowerCase();
++    var onMeritNitiDomain = name === 'meritniti.com' || name.endsWith('.meritniti.com');
++    return onMeritNitiDomain ? '/jobs/' : '/meritniti/jobs/';
++  }
++
++  var basePath = jobsBasePath();
++  allLinks.forEach(function(a){ a.setAttribute('href', basePath); });
++  if(!host) return;
++
++  function text(value){
++    return value === null || value === undefined ? '' : String(value);
++  }
++
++  function safeInternalHref(value){
++    try{
++      var u = new URL(text(value), window.location.origin);
++      if(u.protocol !== 'https:' && u.protocol !== 'http:') return basePath;
++      // Feed cards should point to MeritNiti pages. If a malformed feed row tries
++      // to point elsewhere, fall back to the verified-updates index.
++      if(u.origin !== window.location.origin) return basePath;
++      return u.href;
++    }catch(_){
++      return basePath;
++    }
++  }
++
++  function formatDate(value){
++    if(!value) return '';
++    var d = new Date(String(value).slice(0,10) + 'T00:00:00');
++    if(Number.isNaN(d.getTime())) return text(value);
++    return d.toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' });
++  }
++
++  function statusLabel(row){
++    if(row.latest_event && row.latest_event !== 'Recruitment') return row.latest_event;
++    var map = {
++      closing_soon: 'Closing soon',
++      open: 'Applications open',
++      upcoming: 'Applications upcoming',
++      open_unknown: 'Applications open',
++      recent_unknown: 'Recent notification'
++    };
++    return map[row.application_status] || 'Recruitment';
++  }
++
++  function isActive(row){
++    return ['open','closing_soon','upcoming','open_unknown'].indexOf(row.application_status) !== -1;
++  }
++
++  function byLatestEvent(a,b){
++    return text(b.latest_event_date).localeCompare(text(a.latest_event_date));
++  }
++
++  function chooseRows(rows){
++    var active = rows.filter(isActive);
++    var followups = rows
++      .filter(function(x){ return x.latest_event && x.latest_event !== 'Recruitment'; })
++      .sort(byLatestEvent);
++
++    var selected = active.slice(0,4);
++    followups.forEach(function(row){
++      if(selected.length >= 6) return;
++      if(!selected.some(function(x){ return x.exam_key === row.exam_key; })) selected.push(row);
++    });
++    return selected.slice(0,6);
++  }
++
++  function makeCard(row){
++    var a = document.createElement('a');
++    a.className = 'mn-update-card';
++    a.href = safeInternalHref(row.url);
++
++    var top = document.createElement('div');
++    top.className = 'mn-update-top';
++
++    var kind = document.createElement('span');
++    kind.className = 'mn-update-kind';
++    kind.textContent = statusLabel(row);
++
++    var verified = document.createElement('span');
++    verified.className = 'mn-update-verified';
++    verified.textContent = row.verification_status === 'verified' ? 'Official-source verified' : 'Source checked';
++
++    top.appendChild(kind);
++    top.appendChild(verified);
++
++    var h3 = document.createElement('h3');
++    h3.textContent = text(row.title) || 'Government recruitment update';
++
++    var org = document.createElement('div');
++    org.className = 'mn-update-org';
++    org.textContent = text(row.organisation) || 'Recruiting authority';
++
++    var meta = document.createElement('div');
++    meta.className = 'mn-update-meta';
++
++    if(row.vacancies){
++      var v = document.createElement('span');
++      v.innerHTML = '<strong>' + Number(row.vacancies).toLocaleString('en-IN') + '</strong> posts';
++      meta.appendChild(v);
++    }
++    if(row.deadline){
++      var d = document.createElement('span');
++      d.textContent = 'Last date: ' + formatDate(row.deadline);
++      meta.appendChild(d);
++    }
++    if(!row.deadline && row.latest_event_date){
++      var u = document.createElement('span');
++      u.textContent = 'Update: ' + formatDate(row.latest_event_date);
++      meta.appendChild(u);
++    }
++
++    a.appendChild(top);
++    a.appendChild(h3);
++    a.appendChild(org);
++    a.appendChild(meta);
++    return a;
++  }
++
++  function setMessage(className, title, body, includeLink){
++    host.replaceChildren();
++    var box = document.createElement('div');
++    box.className = className;
++    var b = document.createElement('b');
++    b.textContent = title;
++    var span = document.createElement('span');
++    span.textContent = body;
++    box.appendChild(b);
++    box.appendChild(span);
++    if(includeLink){
++      var link = document.createElement('a');
++      link.href = basePath;
++      link.textContent = 'Open the full updates page →';
++      box.appendChild(link);
++    }
++    host.appendChild(box);
++  }
++
++  fetch(basePath + 'feed.json', {
++    cache:'no-store',
++    credentials:'same-origin',
++    headers:{ 'Accept':'application/json' }
++  })
++  .then(function(response){
++    if(!response.ok) throw new Error('HTTP ' + response.status);
++    return response.json();
++  })
++  .then(function(rows){
++    if(!Array.isArray(rows)) throw new Error('Invalid feed');
++    var selected = chooseRows(rows);
++    host.replaceChildren();
++    if(!selected.length){
++      setMessage(
++        'mn-update-empty',
++        'No prominent verified update is active right now.',
++        'The scanner will add vacancies and important follow-ups here when a qualifying official notice is verified.',
++        true
++      );
++      return;
++    }
++    selected.forEach(function(row){ host.appendChild(makeCard(row)); });
++  })
++  .catch(function(){
++    setMessage(
++      'mn-update-error',
++      'Verified updates are temporarily unavailable.',
++      'The feed may not have been generated or deployed yet. MeritNiti will not substitute unverified information.',
++      true
++    );
++  })
++  .finally(function(){
++    host.setAttribute('aria-busy','false');
++  });
++})();
+--- original/robots.txt
++++ updated/robots.txt
+@@ -2,3 +2,5 @@
+ Allow: /
+ 
+ Sitemap: https://caulderoninteractive.com/sitemap.xml
++
++Sitemap: https://caulderoninteractive.com/meritniti/jobs/sitemap.xml
+--- original/meritniti-support.html
++++ updated/meritniti-support.html
+@@ -5,7 +5,7 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#06070d">
+ <title>Support — MeritNiti: Exam Practice</title>
+-<meta name="description" content="MeritNiti: Exam Practice is coming soon. Here's how to reach Caulderon Interactive and stay updated ahead of launch.">
++<meta name="description" content="Support for MeritNiti: Exam Practice, verified government-job updates, and the MeritNiti WhatsApp channel.">
+ <link rel="canonical" href="https://caulderoninteractive.com/meritniti-support.html">
+ <meta name="robots" content="noindex, follow">
+ <link rel="icon" type="image/png" href="favicon.png">
+@@ -40,6 +40,7 @@
+       <ol>
+         <li><a href="#when">When does it launch?</a></li>
+         <li><a href="#updates">Getting updates</a></li>
++        <li><a href="#job-updates">Government job updates</a></li>
+         <li><a href="#feedback">Suggesting a feature or exam</a></li>
+         <li><a href="#other">Something else</a></li>
+       </ol>
+@@ -58,6 +59,15 @@
+         <h2 class="doc-faq-q">How do I find out when it's available?</h2>
+         <div class="doc-text">
+           <p>Join the <a href="https://whatsapp.com/channel/0029VbDxTnQCRs1ir0d2z517" target="_blank" rel="noopener">MeritNiti WhatsApp channel</a> for launch updates, or email us and we'll let you know when MeritNiti becomes available.</p>
++        </div>
++      </section>
++
++
++      <section class="doc-section" id="job-updates">
++        <h2 class="doc-faq-q">Where do the government job and exam updates come from?</h2>
++        <div class="doc-text">
++          <p>MeritNiti's Government Jobs &amp; Exam Updates section prioritizes prominent recruitment and major exam follow-ups from official recruiting authorities. Each published summary links to the relevant official notice or recruitment portal, and the official source always prevails if anything differs.</p>
++          <p><a class="btn-link" data-meritniti-jobs-link href="/meritniti/jobs/">Open Government Jobs &amp; Exam Updates</a></p>
+         </div>
+       </section>
+ 
+--- original/meritniti-terms.html
++++ updated/meritniti-terms.html
+@@ -46,6 +46,7 @@
+         <li><a href="#iap">In-app purchases</a></li>
+         <li><a href="#advertising">Advertising</a></li>
+         <li><a href="#content">Practice content accuracy</a></li>
++        <li><a href="#updates-service">Government job &amp; exam updates</a></li>
+         <li><a href="#affiliation">No official affiliation</a></li>
+         <li><a href="#acceptable-use">Acceptable use</a></li>
+         <li><a href="#ip">Intellectual property</a></li>
+@@ -68,7 +69,7 @@
+       <section class="doc-section" id="acceptance">
+         <h2>Acceptance of Terms</h2>
+         <div class="doc-text">
+-          <p>These Terms of Use ("Terms") will govern access to and use of MeritNiti: Exam Practice ("the App"), developed and operated by Caulderon Interactive ("we," "us," "our"). By downloading, installing, or using the App once released, you will agree to be bound by these Terms.</p>
++          <p>These Terms of Use ("Terms") will govern access to and use of MeritNiti: Exam Practice, including the mobile application and associated MeritNiti website features such as Government Jobs &amp; Exam Updates (collectively, the "Services"), developed and operated by Caulderon Interactive ("we," "us," "our"). By accessing or using the Services, you agree to be bound by these Terms.</p>
+         </div>
+       </section>
+ 
+@@ -111,6 +112,16 @@
+         <h2>Practice Content Accuracy</h2>
+         <div class="doc-text">
+           <p>MeritNiti's practice questions and explanations are intended as study aids, not as official guidance from any exam or certification body. We make reasonable efforts to keep content accurate and up to date, but the App is not guaranteed to fully reflect the content of any particular exam or certifying organization.</p>
++        </div>
++      </section>
++
++
++      <section class="doc-section" id="updates-service">
++        <h2>Government Job &amp; Exam Updates</h2>
++        <div class="doc-text">
++          <p>MeritNiti may publish concise summaries of government recruitment notices and important exam follow-ups, including application windows, schedules, admit cards, answer keys, results, corrigenda, and related notices. These summaries are an independent convenience service and are not official notifications.</p>
++          <p>We use automated and manual-quality safeguards to prioritize official sources and retain supporting evidence for important extracted claims where possible. Even so, a source may change, a notice may be amended, an automated extraction may be incomplete, or publication may be delayed. The recruiting or examining authority's current official notice, corrigendum, portal, and instructions always control.</p>
++          <p>Users are responsible for verifying eligibility, dates, fees, reservation rules, document requirements, application instructions, and any later amendment with the relevant authority before applying or acting on a MeritNiti summary.</p>
+         </div>
+       </section>
+ 
+--- original/meritniti-privacy.html
++++ updated/meritniti-privacy.html
+@@ -42,6 +42,7 @@
+         <li><a href="#introduction">Introduction</a></li>
+         <li><a href="#collect">Information we collect directly</a></li>
+         <li><a href="#content">Question content &amp; offline use</a></li>
++        <li><a href="#website">Website &amp; update pages</a></li>
+         <li><a href="#third-party">Third-party services</a></li>
+         <li><a href="#permissions">Permissions used by this app</a></li>
+         <li><a href="#storage">Data storage &amp; security</a></li>
+@@ -74,6 +75,15 @@
+         <h2>Question Content &amp; Offline Use</h2>
+         <div class="doc-text">
+           <p>Question banks are delivered to the App as structured content packs. Once downloaded, question content is available on your device without requiring a permanent internet connection. An internet connection is needed to download or update content packs, and for any advertising or purchases described below.</p>
++        </div>
++      </section>
++
++
++      <section class="doc-section" id="website">
++        <h2>Website &amp; Update Pages</h2>
++        <div class="doc-text">
++          <p>MeritNiti's website, including Government Jobs &amp; Exam Updates, does not require a user account and does not accept government-job applications. The site may be delivered and protected by our hosting and security providers, which can process standard web-request information such as IP address, browser or user-agent information, requested URLs, and security metadata as necessary to deliver and protect the site.</p>
++          <p>Links to official recruitment portals and notices take you to third-party websites. Information you submit on those external sites is handled by the relevant authority or service under its own policies; MeritNiti does not receive your application form or credentials through those links.</p>
+         </div>
+       </section>
+ 

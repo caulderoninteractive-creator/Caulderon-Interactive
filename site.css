@@ -510,3 +510,168 @@ h1, h2, h3{ text-wrap: balance; }
 ::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.14); border-radius:8px; border:2px solid var(--bg); }
 ::-webkit-scrollbar-thumb:hover{ background:rgba(255,255,255,.24); }
 html{ scrollbar-color: rgba(255,255,255,.18) var(--bg); scrollbar-width: thin; }
+
+
+/* ---------- 20. MeritNiti Government Jobs & Exam Updates ---------- */
+#govt-jobs{ scroll-margin-top:88px; }
+.mn-updates-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(620px 280px at 8% 0%, rgba(var(--mn-rgb),.075), transparent 68%);
+}
+.mn-updates-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:26px;
+}
+.mn-updates-head .section-head{ margin-bottom:0; }
+.mn-updates-head .section-head .chip{ margin-bottom:16px; }
+.mn-updates-actions{ display:flex; gap:12px; flex-wrap:wrap; padding-bottom:2px; }
+
+.mn-updates-feed{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  min-height:132px;
+}
+.mn-update-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  gap:12px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(var(--mn-rgb),.035), transparent 58%),
+    var(--bg-raise);
+  transition:
+    transform var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+.mn-update-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(var(--mn-rgb),.4);
+  box-shadow:0 20px 42px -24px rgba(var(--mn-rgb),.35);
+}
+.mn-update-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.mn-update-kind{
+  color:var(--mn);
+  font-size:11px;
+  line-height:1.3;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+}
+.mn-update-verified{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:#c9fbe8;
+  font-size:11px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.mn-update-verified::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--mn);
+  box-shadow:0 0 0 3px rgba(var(--mn-rgb),.12);
+}
+.mn-update-card h3{
+  font-size:1.08rem;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+.mn-update-card .mn-update-org{
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.55;
+}
+.mn-update-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin-top:auto;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+  color:var(--muted-2);
+  font-size:12px;
+}
+.mn-update-meta strong{ color:var(--ink-dim); font-weight:700; }
+
+.mn-update-placeholder,
+.mn-update-empty,
+.mn-update-error{
+  grid-column:1 / -1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  min-height:128px;
+  padding:22px;
+  border:1px dashed var(--line-strong);
+  border-radius:var(--radius-md);
+  color:var(--muted);
+  background:rgba(255,255,255,.018);
+}
+.mn-update-placeholder b,
+.mn-update-empty b,
+.mn-update-error b{ color:var(--ink); }
+.mn-update-error a{ color:var(--mn); font-weight:700; }
+
+.mn-update-policy{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  margin-top:22px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  background:var(--line);
+}
+.mn-update-policy > div{
+  padding:18px;
+  background:var(--bg-raise);
+}
+.mn-update-policy b{
+  display:block;
+  color:var(--ink);
+  font-size:13px;
+  margin-bottom:5px;
+}
+.mn-update-policy span{
+  display:block;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.6;
+}
+.mn-updates-disclaimer{
+  margin-top:16px;
+  color:var(--muted-2);
+  font-size:12.5px;
+  line-height:1.7;
+  max-width:88ch;
+}
+
+@media (max-width:900px){
+  .mn-updates-head{ align-items:flex-start; flex-direction:column; }
+  .mn-update-policy{ grid-template-columns:1fr; }
+}
+@media (max-width:720px){
+  .mn-updates-feed{ grid-template-columns:1fr; }
+  .mn-updates-actions{ width:100%; }
+  .mn-updates-actions .btn{ flex:1 1 220px; }
+}

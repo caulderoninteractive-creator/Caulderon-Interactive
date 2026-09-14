@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://caulderoninteractive.com/sitemap.xml
+
+Sitemap: https://caulderoninteractive.com/meritniti/jobs/sitemap.xml
