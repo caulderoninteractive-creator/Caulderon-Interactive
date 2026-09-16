@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "practice_comprehension_02",
+      "examId": "meritniti_practice",
+      "moduleId": "comprehension",
+      "moduleName": "Reading Comprehension",
+      "subjectId": "",
+      "title": "Practice Hub — Reading Comprehension 02",
+      "version": 1,
+      "questionCount": 100,
+      "sizeBytes": 19523,
+      "sha256": "55ffe41e09051d208bd3d7d511a43c323a994e21a6f50b5e089d1e5b6c61392d",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_comprehension_02.json.gz"
+    },
+    {
+      "id": "practice_english_02",
+      "examId": "meritniti_practice",
+      "moduleId": "english_language",
+      "moduleName": "English Language",
+      "subjectId": "",
+      "title": "Practice Hub — English Language 02",
+      "version": 1,
+      "questionCount": 100,
+      "sizeBytes": 8013,
+      "sha256": "9c349bdec385f2f3bdb8e3a38b131b0f0e6e0a88a3b5a7066635426d5ad6ffac",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_english_02.json.gz"
+    },
+    {
+      "id": "practice_general_knowledge_02",
+      "examId": "meritniti_practice",
+      "moduleId": "general_knowledge",
+      "moduleName": "General Knowledge",
+      "subjectId": "",
+      "title": "Practice Hub — General Knowledge 02",
+      "version": 1,
+      "questionCount": 100,
+      "sizeBytes": 6996,
+      "sha256": "7d548cb220234f6d3b3ed0467dce46db58a6712c0b29f0ee05201e449a0f92e8",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_general_knowledge_02.json.gz"
+    },
+    {
+      "id": "practice_hindi_02",
+      "examId": "meritniti_practice",
+      "moduleId": "hindi_language",
+      "moduleName": "Hindi Language",
+      "subjectId": "",
+      "title": "Practice Hub — Hindi Language 02",
+      "version": 1,
+      "questionCount": 100,
+      "sizeBytes": 9158,
+      "sha256": "d8c5907ff0cefabca4a099db39f8dd81ead4b11627a48be21768d9e465cf0fb6",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_hindi_02.json.gz"
+    },
+    {
+      "id": "practice_quantitative_02",
+      "examId": "meritniti_practice",
+      "moduleId": "quantitative",
+      "moduleName": "Quantitative Aptitude",
+      "subjectId": "",
+      "title": "Practice Hub — Quantitative Aptitude 02",
+      "version": 1,
+      "questionCount": 150,
+      "sizeBytes": 10966,
+      "sha256": "484b0ae1a7300ff46e70cebabb8bfdc2f8e15665b0ee11c6901a9d5cd68eee65",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_quantitative_02.json.gz"
+    },
+    {
+      "id": "practice_reasoning_02",
+      "examId": "meritniti_practice",
+      "moduleId": "reasoning",
+      "moduleName": "Logical Reasoning",
+      "subjectId": "",
+      "title": "Practice Hub — Logical Reasoning 02",
+      "version": 1,
+      "questionCount": 150,
+      "sizeBytes": 10708,
+      "sha256": "4a6f5b014119ce7f6be3088d7b1e7d6833659a6a42f849dbb5302595022acd28",
+      "url": "https://caulderoninteractive.com/meritniti/content/packs/practice_reasoning_02.json.gz"
+    }
+  ]
+}

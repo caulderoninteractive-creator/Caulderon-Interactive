@@ -1,0 +1,22 @@
+MeritNiti Practice Hub 1000 — validation report
+
+Remote packs: 12
+Question total: 1000
+
+practice_comprehension_01: 50 questions | 11043 bytes | SHA-256 80b9bd60bab6c3d150f23d3f6f6693dd5485422c85795a21bfa275466d138850
+practice_english_01: 50 questions | 6577 bytes | SHA-256 d9020d9530cd1411282f4b286cf2ffc254bce31b0be39c6bd7a0da092a7723fe
+practice_general_knowledge_01: 50 questions | 8056 bytes | SHA-256 dc8e68104aa3d895014779a81200299a2e2f561839ce6212389408fd82734392
+practice_hindi_01: 50 questions | 5767 bytes | SHA-256 ad7c4be2de8037d95a04c9fe71ccd82b4a282c67b144224acd00f4c967de0ec4
+practice_quantitative_01: 50 questions | 5472 bytes | SHA-256 fba20b7f685bc6691002832060e3a9e8f6a1200ce492603b7c36601cac711374
+practice_reasoning_01: 50 questions | 5383 bytes | SHA-256 50f99af384943c7a29431392e6d99ec967da13535b34640a99ac30afa65369e5
+practice_comprehension_02: 100 questions | 19523 bytes | SHA-256 55ffe41e09051d208bd3d7d511a43c323a994e21a6f50b5e089d1e5b6c61392d
+practice_english_02: 100 questions | 8013 bytes | SHA-256 9c349bdec385f2f3bdb8e3a38b131b0f0e6e0a88a3b5a7066635426d5ad6ffac
+practice_general_knowledge_02: 100 questions | 6996 bytes | SHA-256 7d548cb220234f6d3b3ed0467dce46db58a6712c0b29f0ee05201e449a0f92e8
+practice_hindi_02: 100 questions | 9158 bytes | SHA-256 d8c5907ff0cefabca4a099db39f8dd81ead4b11627a48be21768d9e465cf0fb6
+practice_quantitative_02: 150 questions | 10966 bytes | SHA-256 484b0ae1a7300ff46e70cebabb8bfdc2f8e15665b0ee11c6901a9d5cd68eee65
+practice_reasoning_02: 150 questions | 10708 bytes | SHA-256 4a6f5b014119ce7f6be3088d7b1e7d6833659a6a42f849dbb5302595022acd28
+
+New pack compiler validation: PASS for all six *_02 packs.
+Incorrect-option feedback coverage: 100% for all 700 new questions.
+Duplicate full question+option signatures among the 700 new questions: 0.
+Duplicate full question+option signatures against the original 300: 0.
