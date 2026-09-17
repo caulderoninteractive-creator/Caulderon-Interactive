@@ -1,0 +1,52 @@
+MERITNITI / CAULDERON INTERACTIVE — FRONTEND MERGE & UI POLISH
+16 September 2026
+
+WHAT WAS MERGED FROM THE FIRST ARCHIVE
+- Re-applied the newer Caulderon frontend package without overwriting the larger project’s current generated jobs data.
+- Kept the real Google Play / App Store badge treatment from the newer frontend: actual supplied artwork, restrained hover depth, and a clear COMING SOON ribbon on disabled badges.
+- Re-applied the frontend cleanup from the newer package: removed the orphaned NetPrepQuiz legacy pages and the unused styles.css / site-enhancements.css / README.txt experiment files.
+- Preserved the larger project’s icons, feature graphics, CNAME, security.txt, MeritNiti content manifests, Git metadata, and complete GovtJobsEngine.
+
+MERITNITI LANDING PAGE
+- Shortened the hero copy so the product proposition reads faster.
+- Rebuilt the Government Jobs section as one restrained panel instead of several competing blocks.
+- Limited the landing-page feed to four high-value cards.
+- Moved the detailed trust / verification explanation into an accessible disclosure panel. The information remains available without dominating the page.
+- Tightened card spacing, typography, metadata and CTA language for a more editorial, less dashboard-like presentation.
+- Kept the WhatsApp channel and full verified-updates page as clear primary actions.
+
+GOVERNMENT JOBS INDEX
+- Reworked the generated index into a professional searchable interface.
+- Added live text search across title, organisation, family, qualification and update text.
+- Added filters for All, Open, Closing soon, Upcoming and Exam updates.
+- Added compact service statistics and a visible last-verified refresh date.
+- Changed large stacked cards into a two-column responsive grid with only source-backed facts that actually exist; missing facts are omitted instead of shown as dashes.
+- Added progressive disclosure for long exam-update lists (eight initially, then Show more). Search/filter modes still expose all matching entries.
+- Added a proper no-results state.
+- Cleaned noisy scraper-derived display titles when a page title is obviously generic or contains portal instructions such as “Download Advertisement” / “Accessible Version”. The underlying source data is untouched.
+
+INDIVIDUAL JOB PAGES
+- Removed the previous repetition between “snapshot” and “top facts” blocks.
+- Consolidated important applicant information into one compact quick-facts grid.
+- Kept official application / notification links immediately below the title.
+- Preserved eligibility, salary/fee, selection process and lifecycle history as distinct readable sections.
+- Collapsed technical verification metadata and retained evidence into a Source notes disclosure.
+- Limited the visible timeline to the six most recent relevant events; older lifecycle entries remain accessible through an expandable control.
+- Added a Copy page link action.
+- Added Open Graph metadata, theme colour, favicon linkage, skip links and clearer semantic navigation.
+
+GENERATOR / ARCHITECTURE
+- The polish now lives in GovtJobsEngine/site_builder.py, not only in already-generated HTML. Future scans therefore keep the new interface automatically.
+- Generated jobs pages now share meritniti/jobs/assets/jobs.css and jobs.js instead of embedding a large duplicate CSS block into every page.
+- The shared jobs JavaScript handles filtering, search, progressive disclosure and copy-link behaviour.
+- The main company site remains responsible for site.css / script.js and the MeritNiti landing-page feed.
+
+VALIDATION COMPLETED
+- GovtJobsEngine unit tests: 35 / 35 passing after the redesign.
+- Shared script.js and generated jobs.js pass Node syntax checking.
+- site.css and jobs.css have balanced CSS blocks.
+- Local reference audit checked 584 relative href/src references across the frontend: 0 missing.
+- The current database was rebuilt into 9 generated exam pages plus the jobs index, feed, sitemap and shared jobs assets.
+
+DEPLOYMENT NOTE
+Deploy the Caulderon-Interactive folder as before. When the scanner runs later, it is safe for it to regenerate meritniti/jobs/ because the new layout is generated from the engine itself.

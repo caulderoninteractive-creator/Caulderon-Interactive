@@ -93,12 +93,12 @@ document.querySelectorAll('.nav-toggle').forEach(function(btn){
       .filter(function(x){ return x.latest_event && x.latest_event !== 'Recruitment'; })
       .sort(byLatestEvent);
 
-    var selected = active.slice(0,4);
+    var selected = active.slice(0,3);
     followups.forEach(function(row){
-      if(selected.length >= 6) return;
+      if(selected.length >= 4) return;
       if(!selected.some(function(x){ return x.exam_key === row.exam_key; })) selected.push(row);
     });
-    return selected.slice(0,6);
+    return selected.slice(0,4);
   }
 
   function makeCard(row){
@@ -115,7 +115,7 @@ document.querySelectorAll('.nav-toggle').forEach(function(btn){
 
     var verified = document.createElement('span');
     verified.className = 'mn-update-verified';
-    verified.textContent = row.verification_status === 'verified' ? 'Official-source verified' : 'Source checked';
+    verified.textContent = row.verification_status === 'verified' ? 'Verified source' : 'Source checked';
 
     top.appendChild(kind);
     top.appendChild(verified);
@@ -132,7 +132,11 @@ document.querySelectorAll('.nav-toggle').forEach(function(btn){
 
     if(row.vacancies){
       var v = document.createElement('span');
-      v.innerHTML = '<strong>' + Number(row.vacancies).toLocaleString('en-IN') + '</strong> posts';
+      var vacancyNumber = Number(row.vacancies);
+      var strong = document.createElement('strong');
+      strong.textContent = Number.isFinite(vacancyNumber) ? vacancyNumber.toLocaleString('en-IN') : text(row.vacancies);
+      v.appendChild(strong);
+      v.appendChild(document.createTextNode(' posts'));
       meta.appendChild(v);
     }
     if(row.deadline){

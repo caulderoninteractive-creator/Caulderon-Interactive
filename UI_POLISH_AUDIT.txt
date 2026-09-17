@@ -1,77 +1,54 @@
-CAULDERON INTERACTIVE — UI POLISH PASS
-14 September 2026
+CAULDERON INTERACTIVE — UI POLISH PASS, ROUND 2
+15 September 2026
 
-STRUCTURAL FIX (found during this pass)
-- The root index.html on disk was actually the Devlog index page (using
-  ../ relative paths meant for a subfolder), not the studio homepage.
-- Devlog content now lives at devlog/index.html, devlog/portal-mosaic-no-
-  bitmaps.html, devlog/multiplier-fatigue.html, devlog/why-mystery-gates.html.
-  Their existing ../ relative paths now resolve correctly.
-- The studio homepage (hero, all 6 titles, craft/about/contact sections,
-  6-column footer) has been restored to index.html.
-- Per your note: devlog is intentionally NOT linked from primary nav/footer
-  right now — left that way on purpose, nothing added there.
+RE-APPLIED STRUCTURAL FIXES
+The project file store had reverted to its unfixed state between sessions
+(index.html was the Devlog page again, netprepquiz-*/styles.css/site-
+enhancements.css/README.txt were back). Re-applied the same fixes as the
+last pass: devlog now lives in devlog/, the real homepage is back at
+index.html, and the orphaned legacy files are removed again.
 
-REMOVED (superseded / unreferenced, kept nothing was breaking on purpose)
-- netprepquiz.html, netprepquiz-terms.html, netprepquiz-support.html —
-  pre-MeritNiti-rename leftovers; not linked from any page or sitemap.xml,
-  and two of their own legal-grid links (netprepquiz-privacy.html,
-  netprepquiz-copyright.html) didn't even exist as files.
-- styles.css, site-enhancements.css, README.txt — an earlier standalone
-  visual-experiment version of the Number Run landing page. No current
-  HTML file links either stylesheet; site.css is the only stylesheet in use.
+Good news: site.css, meritniti.html and script.js had NOT reverted -- they
+already carried forward last round's polish (the --ur token, nav/footer
+gradient bar, hero glow, all-6-titles cross-promo grids) plus new
+Government Jobs wiring that was added independently. Those were kept as-is
+and only extended, not rebuilt.
 
-DESIGN SYSTEM
-- Untold Realms is now a first-class token like the other five titles:
-  --ur / --ur-rgb in :root, plus a .game-card.ur class. Every place that
-  used to hardcode #d9b66f / 217,182,111 inline now references the token
-  (index.html, about.html, untoldrealms.html, and every new card below).
+REAL STORE BADGES
+Swapped the generic placeholder icon+text badges for the actual Google
+Play and App Store artwork you supplied (assets/google-play.png,
+assets/app-store.png). Live vs. coming-soon is now shown by dimming the
+real badge (grayscale + reduced brightness/opacity) and adding a small
+"COMING SOON" ribbon in the corner, rather than by swapping in different
+wording baked into the image, so Tilt Maze / Block Chakra / Number Run's
+App Store badge can't be mistaken for a live listing.
+  - Number Run: live Google Play badge + dimmed, ribboned App Store badge.
+  - Tilt Maze, Block Chakra: dimmed, ribboned Google Play badge.
+  - MeritNiti and the two RPGs: no badge, unchanged -- no store listing
+    exists yet, so nothing was added there.
 
-ALL 6 TITLES, EVERYWHERE (the main ask)
-"More from Caulderon Interactive" grids were inconsistent — some titles
-only listed 2-4 of the other 5. Every game's grid now lists all five other
-titles, in the same order (Number Run, Tilt Maze, Block Chakra, MeritNiti,
-Ashen Crown, Untold Realms, minus whichever page you're on):
-  - numberrun.html, tiltmaze.html, blockchakra.html, meritniti.html were
-    each missing Untold Realms — added.
-  - ashencrown.html only had Number Run + Untold Realms — added Tilt Maze,
-    Block Chakra, MeritNiti.
-  - untoldrealms.html only had Ashen Crown + Number Run — added Tilt Maze,
-    Block Chakra, MeritNiti, and reordered to match the site-wide pattern.
+MERITNITI GOVERNMENT JOBS & EXAM UPDATES -- NOW LIVE IN THE PACKAGE
+Added the three files you provided for https://caulderoninteractive.com/meritniti/jobs/:
+  - meritniti/jobs/index.html -- kept your structure and content, added a
+    favicon link, theme-color, valid &-escaped title/heading, an
+    Open Graph block matching the rest of the site's pattern, and a
+    Support link in the footer for consistency with every other page.
+  - meritniti/jobs/feed.json and meritniti/jobs/sitemap.xml -- placed
+    exactly as supplied (live generated data, not something for me to edit).
+  - meritniti.html and script.js already fetch/link this correctly
+    (basePath '/meritniti/jobs/'), so no wiring changes were needed there.
 
-STORE ICONS
-Google Play / App Store badges were plain centered text with no iconography.
-Rebuilt as icon + two-line label components:
-  - A generic "play" glyph for Google Play, a generic rounded-square /
-    arrow glyph for the App Store — deliberately NOT reproductions of
-    Google's or Apple's actual trademarked marks (same approach the old
-    README.txt flagged: placeholder-style glyphs meant to stand in until
-    official badge artwork is dropped in).
-  - Applied to Number Run (live Play Store + "coming soon" App Store) and
-    to Tilt Maze / Block Chakra ("coming soon to Google Play").
-  - MeritNiti and the two RPGs weren't given store badges — they don't
-    have a public store listing yet, so nothing was invented for them.
+ONE GAP I DIDN'T FILL IN
+feed.json and the jobs index page both link to
+meritniti/jobs/india-post-gds-2026/ (the individual exam detail page),
+but that page's content wasn't supplied. Per DEPLOY_README.txt this is
+generated by the separate GovJobs scanner tool, and I didn't have
+verified source material for that specific listing (vacancy count,
+event history, etc.), so I left it out rather than invent one. Run the
+scanner (or drop in the generated page) and that link resolves.
 
-VISUAL POLISH (site.css)
-- A thin six-color gradient line (one per title) under the nav and above
-  the footer — the one deliberate "brand" flourish, ties every page back
-  to the full lineup rather than just decorating.
-- Each hero now gets a soft radial glow tinted to that page's own accent
-  color (color-mix, driven by the --accent already set per hero).
-- Hero emblems and every game-card icon get a matching soft accent glow
-  ring instead of a flat drop shadow.
-- Store badges, doc-callout boxes (now with a small info glyph), legal
-  cards, feature cards and value cards all got restrained depth/hover
-  refinements — no new scroll-triggered or load-triggered animation of
-  any kind was added, everything is still fully visible on load.
-- Small quality-floor details: balanced heading line-wraps, a custom
-  slim scrollbar, a tinted text-selection color.
-
-WHAT STILL NEEDS TO COME FROM YOU
-This project snapshot doesn't contain any image binaries (icon.png,
-favicon.png, tiltmaze-icon.png, meritniti-icon.png, blockchakra-icon.png,
-ashencrown-icon.png, untoldrealms-icon.png, apple-touch-icon.png,
-favicon-32.png). Every <img> reference to them was left exactly as-is —
-drop your existing real asset files into the root next to these HTML
-files and everything resolves. Nothing here was replaced with a
-placeholder graphic.
+STILL TRUE FROM LAST ROUND
+This package has no image binaries except the two store badges you just
+uploaded. icon.png, favicon.png, and every title's icon still need to
+come from you -- every <img> reference is untouched and will resolve as
+soon as those files sit next to the HTML.
