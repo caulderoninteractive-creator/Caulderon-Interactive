@@ -627,3 +627,7 @@ html{ scrollbar-color: rgba(255,255,255,.18) var(--bg); scrollbar-width: thin; }
   .mn-update-verified{ white-space:normal; text-align:right; }
 }
 
+
+/* MeritNiti split wordmark: keep MERIT neutral and NITI in product green. */
+.hero[style*="--accent:var(--mn)"] h1 .merit-word{color:var(--ink,#f4f6fc)}
+.hero[style*="--accent:var(--mn)"] h1 .accent{color:var(--mn)}
