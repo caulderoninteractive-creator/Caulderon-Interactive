@@ -21,7 +21,7 @@ Validation completed
 - Studio administration/security routes expose admin@.
 - sitemap.xml parses successfully and every production sitemap URL resolves to a packaged file.
 - robots.txt points to https://caulderoninteractive.com/sitemap.xml.
-- Untold Realms book icon is packaged as both untoldrealms-icon.png and untoldrealms-icon-512.png; both are identical 512×512 PNGs with transparent outer corners to avoid unnecessary black edging on the site.
+- Untold Realms book icon is packaged as both untoldrealms-icon-v2.png and untoldrealms-icon-512.png; both are identical 512×512 PNGs with transparent outer corners to avoid unnecessary black edging on the site.
 - Number Run icon.png is present and valid.
 - Master site.css is byte-for-byte unchanged from the supplied IconFix package.
 - Legal-page displayed review/update dates were refreshed to 13 September 2026 where contact details changed.

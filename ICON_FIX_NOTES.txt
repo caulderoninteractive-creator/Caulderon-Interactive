@@ -4,7 +4,7 @@ ASHEN CROWN + UNTOLD REALMS ICON STATUS
 - Homepage, heroes and cross-promotion cards use packaged PNG icons.
 - Untold Realms now uses the user-selected closed-book “Untold Realms” artwork.
 - The outer unused black margin was cropped before resizing back to 512×512; the artwork itself was preserved.
-- untoldrealms-icon.png and untoldrealms-icon-512.png are identical 512×512 PNGs.
+- untoldrealms-icon-v2.png and untoldrealms-icon-512.png are identical 512×512 PNGs.
 - Ashen Crown icon references remain unchanged.
 - Social-preview metadata points to the corresponding production-domain icon URLs.
 - The supplied master site.css remains unchanged.
