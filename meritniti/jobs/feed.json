@@ -1,26 +1,20 @@
 [
   {
-    "exam_key": "public-sector-wapcos-careers-2026",
-    "title": "WAPCOS Young Professionals Recruitment 2026",
-    "organisation": "WAPCOS Limited",
-    "vacancies": 37,
-    "deadline": "2026-10-08",
-    "official_notice": "https://www.wapcos.co.in/media/docs/Career/Advertisement_r5Nha0_RTkDd8.pdf",
-    "url": "https://caulderoninteractive.com/meritniti/jobs/public-sector-wapcos-careers-2026/",
-    "application_status": "open",
-    "verified_on": "2026-09-28",
-    "verification_status": "editor_reviewed"
-  },
-  {
     "exam_key": "defence-defence-research-and-development-organisation-3fe54d3615-2026",
-    "title": "DRDO Chair and Fellowship Positions 2026",
+    "title": "Advertisement for the position of DRDO Chair, DRDO Distinguished Fellowship and DRDO Fellowship 2026",
     "organisation": "Defence Research and Development Organisation",
     "vacancies": null,
+    "apply_start": "2026-09-15",
     "deadline": "2026-10-16",
-    "official_notice": "https://drdo.gov.in/drdo/en/offerings/vacancies/advertisement-position-drdo-chair-drdo-distinguished-fellowship-and-drdo",
-    "url": "https://caulderoninteractive.com/meritniti/jobs/defence-defence-research-and-development-organisation-3fe54d3615-2026/",
     "application_status": "open",
-    "verified_on": "2026-09-28",
-    "verification_status": "editor_reviewed"
+    "coverage_tier": "verified_current_opening",
+    "latest_event": "Recruitment",
+    "latest_event_title": "Advertisement for the position of DRDO Chair, DRDO Distinguished Fellowship and DRDO Fellowship",
+    "latest_event_date": "2026-09-22T10:57:01.251139+00:00",
+    "url": "https://caulderoninteractive.com/meritniti/jobs/defence-defence-research-and-development-organisation-3fe54d3615-2026/",
+    "official_notice": "http://drdo.gov.in/drdo/en/offerings/vacancies/advertisement-position-drdo-chair-drdo-distinguished-fellowship-and-drdo",
+    "verification_status": "verified",
+    "verification_score": 95,
+    "prominence": 94
   }
 ]
