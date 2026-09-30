@@ -3,24 +3,26 @@
     "exam_key": "public-sector-wapcos-careers-2026",
     "title": "WAPCOS Young Professionals Recruitment 2026",
     "organisation": "WAPCOS Limited",
+    "sector": "PSUs, Regulators & Public Institutions",
     "vacancies": 37,
     "deadline": "2026-10-08",
+    "eligibility": "Stream-specific degrees and relevant experience; read the official notice",
+    "application_method": "Offline application to WAPCOS, Gurugram",
     "official_notice": "https://www.wapcos.co.in/media/docs/Career/Advertisement_r5Nha0_RTkDd8.pdf",
-    "url": "https://caulderoninteractive.com/meritniti/jobs/public-sector-wapcos-careers-2026/",
-    "application_status": "open",
-    "verified_on": "2026-09-28",
-    "verification_status": "editor_reviewed"
+    "allowed_hosts": ["www.wapcos.co.in"],
+    "verified_on": "2026-09-28"
   },
   {
     "exam_key": "defence-defence-research-and-development-organisation-3fe54d3615-2026",
     "title": "DRDO Chair and Fellowship Positions 2026",
     "organisation": "Defence Research and Development Organisation",
+    "sector": "Defence & Uniformed Services",
     "vacancies": null,
     "deadline": "2026-10-16",
+    "eligibility": "Post-specific requirements; read the official advertisement",
+    "application_method": "Follow the application form and instructions in the official notice",
     "official_notice": "https://drdo.gov.in/drdo/en/offerings/vacancies/advertisement-position-drdo-chair-drdo-distinguished-fellowship-and-drdo",
-    "url": "https://caulderoninteractive.com/meritniti/jobs/defence-defence-research-and-development-organisation-3fe54d3615-2026/",
-    "application_status": "open",
-    "verified_on": "2026-09-28",
-    "verification_status": "editor_reviewed"
+    "allowed_hosts": ["drdo.gov.in"],
+    "verified_on": "2026-09-28"
   }
 ]
