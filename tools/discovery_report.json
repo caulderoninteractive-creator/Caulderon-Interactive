@@ -1,31 +1,6 @@
 {
-  "checked_at": "2026-10-20T13:07:15.315996+05:30",
-  "leads": [
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies"
-    },
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies/archive"
-    },
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies/know-more"
-    },
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies?page=0"
-    },
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies?page=1"
-    },
-    {
-      "source": "DRDO",
-      "url": "https://drdo.gov.in/drdo/hi/offerings/vacancies"
-    }
-  ],
+  "checked_at": "2026-10-21T13:12:10.491239+05:30",
+  "leads": [],
   "failures": [
     {
       "source": "UPSC",
@@ -33,7 +8,11 @@
     },
     {
       "source": "IBPS",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1010)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+    },
+    {
+      "source": "DRDO",
+      "error": "<urlopen error timed out>"
     },
     {
       "source": "WAPCOS",
