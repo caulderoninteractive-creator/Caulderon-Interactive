@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29T14:01:49.320552+05:30",
+  "checked_at": "2026-10-30T14:11:31.387824+05:30",
   "leads": [],
   "failures": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "source": "IBPS",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1010)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
       "source": "DRDO",
