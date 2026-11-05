@@ -1,4 +1,4 @@
-name: MeritNiti job refresh
+name: MeritNiti official job discovery
 on:
   schedule:
     - cron: '20 2 * * *'
@@ -6,18 +6,20 @@ on:
 permissions:
   contents: write
 jobs:
-  refresh:
+  discover:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Refresh verified notices and discover official leads
-        run: python tools/refresh_jobs.py --discover
-      - name: Publish validated changes
+      - name: Discover official leads without overwriting published jobs
+        run: python tools/refresh_jobs.py --discover-only
+      - name: Save lead report
         run: |
           git config user.name 'MeritNiti jobs bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add meritniti/jobs/feed.json meritniti/jobs/index.html meritniti/jobs/*/index.html meritniti/jobs/sitemap.xml meritniti/jobs/generated_manifest.json tools/discovery_report.json
-          if ! git diff --cached --quiet; then git commit -m 'Refresh MeritNiti jobs'; git push; fi
+          git add tools/discovery_report.json
+          if ! git diff --cached --quiet; then git commit -m 'Refresh MeritNiti official leads'; git push; fi

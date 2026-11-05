@@ -27,6 +27,17 @@ SOURCES = {
     "IBPS": "https://www.ibps.in/",
     "DRDO": "https://drdo.gov.in/drdo/en/offerings/vacancies",
     "WAPCOS": "https://www.wapcos.co.in/careers",
+    "India Post": "https://www.indiapost.gov.in/vacancies",
+    "SBI": "https://sbi.co.in/web/careers/current-openings",
+    "RBI": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx",
+    "ISRO": "https://www.isro.gov.in/CurrentOpportunities.html",
+    "KVS": "https://kvsangathan.nic.in/en/recruitment/",
+    "ICMR": "https://www.icmr.gov.in/employment-opportunities",
+    "RRB Chandigarh": "https://www.rrbcdg.gov.in/",
+    "DSSSB": "https://dsssb.delhi.gov.in/vacancies",
+    "Bihar PSC": "https://bpsc.bihar.gov.in/",
+    "UPPSC": "https://uppsc.up.nic.in/",
+    "TNPSC": "https://www.tnpsc.gov.in/",
 }
 
 
@@ -43,29 +54,47 @@ class Links(HTMLParser):
 
 
 def discover():
+    """Visit high-value official indexes and a few first-party careers pages."""
     leads, failures = [], []
     for name, source in SOURCES.items():
-        try:
-            req = Request(source, headers={"User-Agent": "MeritNitiBot/1.0 (+https://caulderoninteractive.com/meritniti-support.html)"})
-            with urlopen(req, timeout=18) as response:
-                data = response.read(1_500_001)
-                if len(data) > 1_500_000:
-                    raise ValueError("page exceeds size limit")
-                body = data.decode("utf-8", "replace")
-            parser = Links()
-            parser.feed(body)
-            origin = urlparse(source).hostname
-            for href in parser.hrefs:
-                url = urljoin(source, href)
-                parsed = urlparse(url)
-                if parsed.scheme == "https" and parsed.hostname == origin and re.search(r"recruit|vacanc|career|advert|notice|\.pdf", parsed.path, re.I):
-                    leads.append({"source": name, "url": url.split("#")[0]})
-        except Exception as exc:
-            failures.append({"source": name, "error": str(exc)[:180]})
-    report = {"checked_at": dt.datetime.now(IST).isoformat(), "leads": sorted({(x['source'], x['url']) for x in leads}), "failures": failures}
-    report["leads"] = [{"source": name, "url": url} for name, url in report["leads"]]
+        origin = urlparse(source).hostname
+        frontier, seen = [source], set()
+        while frontier and len(seen) < 4:
+            page = frontier.pop(0)
+            if page in seen:
+                continue
+            seen.add(page)
+            try:
+                req = Request(page, headers={"User-Agent": "MeritNitiBot/1.0 (+https://caulderoninteractive.com/meritniti-support.html)"})
+                with urlopen(req, timeout=12) as response:
+                    if urlparse(response.url).hostname != origin:
+                        raise ValueError("source redirected off its official host")
+                    data = response.read(1_500_001)
+                    if len(data) > 1_500_000:
+                        raise ValueError("page exceeds size limit")
+                    body = data.decode("utf-8", "replace")
+                parser = Links()
+                parser.feed(body)
+                for href in parser.hrefs:
+                    url = urljoin(page, href).split("#")[0]
+                    parsed = urlparse(url)
+                    if parsed.scheme != "https" or parsed.hostname != origin:
+                        continue
+                    path = parsed.path.lower()
+                    if re.search(r"archive|tender|result|answer.key|login", path):
+                        continue
+                    if re.search(r"recruit|vacanc|career|opportunit|employment|advert|notice|opening|\.pdf", path):
+                        leads.append({"source": name, "url": url})
+                        if page == source and not path.endswith(".pdf") and url not in seen and len(frontier) < 3:
+                            frontier.append(url)
+            except Exception as exc:
+                failures.append({"source": name, "page": page, "error": str(exc)[:180]})
+    unique = sorted({(x["source"], x["url"]) for x in leads})
+    report = {"checked_at": dt.datetime.now(IST).isoformat(),
+              "leads": [{"source": name, "url": url} for name, url in unique],
+              "failures": failures}
     (ROOT / "tools/discovery_report.json").write_text(json.dumps(report, indent=2) + "\n")
-    print(f"Discovered {len(report['leads'])} official-domain links; {len(failures)} sources failed. Leads are not published.")
+    print(f"Discovered {len(unique)} official-host links; {len(failures)} pages failed. Leads are not published.")
 
 
 def validate(rows):
@@ -147,10 +176,12 @@ def publish():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--discover", action="store_true")
+    parser.add_argument("--discover-only", action="store_true", help="Report leads without altering Studio-published pages")
     args = parser.parse_args()
     try:
-        publish()
-        if args.discover:
+        if not args.discover_only:
+            publish()
+        if args.discover or args.discover_only:
             discover()
     except (ValueError, KeyError, json.JSONDecodeError) as exc:
         sys.exit(f"Publication blocked: {exc}")

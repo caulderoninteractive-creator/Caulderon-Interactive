@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lumen app icon</title>
+  <desc id="desc">A glass prism splitting a warm beam into mint and violet light on a deep blue background.</desc>
+  <defs>
+    <radialGradient id="bg" cx="32%" cy="24%" r="82%">
+      <stop offset="0" stop-color="#17323c"/>
+      <stop offset="1" stop-color="#0b1922"/>
+    </radialGradient>
+    <linearGradient id="prism" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#234957"/>
+      <stop offset="1" stop-color="#132d37"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="96" cy="94" r="2.8" fill="#b6d2c5" opacity=".52"/>
+  <circle cx="418" cy="114" r="3.2" fill="#b19be5" opacity=".58"/>
+  <circle cx="391" cy="398" r="2.4" fill="#a4e0d5" opacity=".5"/>
+  <path d="M256 118 373 356H139Z" fill="url(#prism)" stroke="#b6d2c5" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M80 294h125l90-76h137" fill="none" stroke="#ffd18c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="m294 237 132 38" fill="none" stroke="#a4e0d5" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="m291 253 128 79" fill="none" stroke="#b19be5" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M256 118 373 356H139Z" fill="none" stroke="#d6eee4" stroke-opacity=".44" stroke-width="4" stroke-linejoin="round"/>
+</svg>

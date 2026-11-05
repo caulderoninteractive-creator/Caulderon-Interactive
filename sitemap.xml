@@ -38,10 +38,20 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://caulderoninteractive.com/tiltmaze.html</loc>
+    <loc>https://caulderoninteractive.com/eltru.html</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://caulderoninteractive.com/eltru-privacy.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/eltru-terms.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/eltru-support.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/eltru-copyright.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://caulderoninteractive.com/lumen.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caulderoninteractive.com/lumen-privacy.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/lumen-terms.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/lumen-support.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/lumen-copyright.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url>
     <loc>https://caulderoninteractive.com/blockchakra.html</loc>
     <changefreq>monthly</changefreq>
@@ -49,9 +59,15 @@
   </url>
   <url>
     <loc>https://caulderoninteractive.com/meritniti.html</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url><loc>https://caulderoninteractive.com/meritniti/jobs/</loc><lastmod>2026-11-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caulderoninteractive.com/meritniti-privacy.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/meritniti-terms.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/meritniti-support.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/meritniti-copyright.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url>
     <loc>https://caulderoninteractive.com/ashencrown.html</loc>
     <changefreq>monthly</changefreq>
@@ -84,9 +100,9 @@
   <url><loc>https://caulderoninteractive.com/ashencrown-terms.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://caulderoninteractive.com/ashencrown-support.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://caulderoninteractive.com/ashencrown-legal.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://caulderoninteractive.com/untoldrealms.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://caulderoninteractive.com/untoldrealms-privacy.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://caulderoninteractive.com/untoldrealms-terms.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://caulderoninteractive.com/untoldrealms-support.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://caulderoninteractive.com/untoldrealms-legal.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://caulderoninteractive.com/untoldrealms.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://caulderoninteractive.com/untoldrealms-privacy.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/untoldrealms-terms.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/untoldrealms-support.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://caulderoninteractive.com/untoldrealms-legal.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>

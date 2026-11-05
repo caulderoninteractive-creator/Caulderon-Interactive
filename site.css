@@ -21,9 +21,9 @@
      not a decorative palette, so a color always means "that game" */
   --nr:    #5ee7ff;  /* Number Run: Pro Edition */
   --nr-rgb: 94,231,255;
-  --tm:    #a78bfa;  /* Tilt Maze */
-  --tm-rgb: 167,139,250;
-  --tm2:   #fbbf24;
+  --tm:    #f0a65a;  /* Eltru's Way Home */
+  --tm-rgb: 240,166,90;
+  --tm2:   #9fcb70;
   --bc:    #ff6f91;  /* Block Chakra */
   --bc-rgb: 255,111,145;
   --bc2:   #ffc93c;
@@ -35,6 +35,9 @@
   --ac2:   #9ca3af;
   --ur:    #d9b66f;  /* Untold Realms */
   --ur-rgb: 217,182,111;
+  --lu:    #a4e0d5;  /* Lumen */
+  --lu-rgb: 164,224,213;
+  --lu2:   #b19be5;
 
   --live:  #34d399;
   --soon:  #9aa4bf;
@@ -135,7 +138,7 @@ button{ font:inherit; }
 }
 .nav::after{
   content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px;
-  background:linear-gradient(90deg, var(--nr), var(--tm), var(--bc), var(--mn), var(--ac), var(--ur));
+  background:linear-gradient(90deg, var(--nr), var(--tm), var(--lu), var(--bc), var(--mn), var(--ac), var(--ur));
   opacity:.5;
 }
 .nav-inner{
@@ -290,6 +293,7 @@ button{ font:inherit; }
 }
 .game-card.nr{ --accent: var(--nr); --accent-rgb: var(--nr-rgb); }
 .game-card.tm{ --accent: var(--tm); --accent-rgb: var(--tm-rgb); }
+.game-card.lu{ --accent: var(--lu); --accent-rgb: var(--lu-rgb); }
 .game-card.bc{ --accent: var(--bc); --accent-rgb: var(--bc-rgb); }
 .game-card.mn{ --accent: var(--mn); --accent-rgb: var(--mn-rgb); }
 .game-card.ac{ --accent: var(--ac); --accent-rgb: var(--ac-rgb); }
@@ -341,6 +345,41 @@ button{ font:inherit; }
 .feature b{ font-size:15.5px; font-weight:600; }
 .feature p{ margin-top:8px; font-size:13.5px; color:var(--muted); line-height:1.65; }
 
+/* ---------- Product presentation ---------- */
+.product-showcase{
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);
+  gap:42px; align-items:center;
+}
+.product-showcase-copy h2{ font-size:clamp(1.9rem,1.55rem + 1.5vw,2.7rem); line-height:1.08; }
+.product-showcase-copy p{ margin-top:16px; color:var(--muted); font-size:1.02rem; line-height:1.75; }
+.optics-panel{
+  position:relative; min-height:330px; overflow:hidden; border:1px solid var(--line);
+  border-radius:28px; background:radial-gradient(circle at 78% 20%,rgba(var(--lu-rgb),.14),transparent 32%),#09151d;
+  box-shadow:0 26px 60px -35px rgba(var(--lu-rgb),.5);
+}
+.optics-panel::before{
+  content:""; position:absolute; width:170px; height:170px; left:38%; top:76px;
+  clip-path:polygon(50% 0,100% 100%,0 100%); background:rgba(35,73,87,.72);
+  border:2px solid #b6d2c5; filter:drop-shadow(0 0 18px rgba(var(--lu-rgb),.25));
+}
+.beam{ position:absolute; height:7px; border-radius:999px; transform-origin:left center; filter:drop-shadow(0 0 8px currentColor); }
+.beam-in{ left:5%; top:196px; width:47%; color:#ffd18c; background:currentColor; transform:rotate(-9deg); }
+.beam-mint{ left:55%; top:157px; width:40%; color:var(--lu); background:currentColor; transform:rotate(12deg); }
+.beam-violet{ left:55%; top:178px; width:38%; color:var(--lu2); background:currentColor; transform:rotate(29deg); }
+.optics-caption{ position:absolute; left:24px; bottom:20px; right:24px; color:var(--muted); font-size:12px; }
+.screen-gallery{
+  display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px;
+  overflow-x:auto; padding:4px 2px 16px; scroll-snap-type:x proximity;
+}
+.screen-shot{ min-width:150px; scroll-snap-align:start; }
+.screen-shot img{
+  width:100%; aspect-ratio:266/592; object-fit:cover; border-radius:18px;
+  border:1px solid var(--line); box-shadow:0 18px 38px -24px rgba(0,0,0,.9);
+}
+.screen-shot figcaption{ margin-top:9px; color:var(--muted-2); font-size:11.5px; text-align:center; }
+.release-note{ padding:17px 19px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.025); color:var(--muted); font-size:13px; }
+.release-note b{ color:var(--ink-dim); }
+
 /* ---------- 11. About / split / story ---------- */
 .split{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
 .split p{ color:var(--muted); font-size:1.05rem; line-height:1.75; }
@@ -368,12 +407,12 @@ button{ font:inherit; }
 footer.site-footer{ border-top:1px solid var(--line); position:relative; z-index:1; }
 footer.site-footer::before{
   content:""; position:absolute; top:-1px; left:0; right:0; height:1px;
-  background:linear-gradient(90deg, var(--nr), var(--tm), var(--bc), var(--mn), var(--ac), var(--ur));
+  background:linear-gradient(90deg, var(--nr), var(--tm), var(--lu), var(--bc), var(--mn), var(--ac), var(--ur));
   opacity:.35;
 }
 .footer-grid{
   max-width: var(--container); margin:0 auto; padding:56px 24px 32px;
-  display:grid; grid-template-columns: 1.3fr repeat(5, minmax(110px,1fr)); gap:24px;
+  display:grid; grid-template-columns: 1.3fr repeat(6, minmax(105px,1fr)); gap:22px;
 }
 .footer-about{ padding-right:20px; }
 .footer-about p{ margin-top:12px; color:var(--muted); font-size:13.5px; line-height:1.7; max-width:34ch; }
@@ -472,6 +511,8 @@ footer.site-footer::before{
   .legal-grid{ grid-template-columns:1fr 1fr; }
   .footer-grid{ grid-template-columns:1fr 1fr 1fr; }
   .doc-layout{ grid-template-columns:1fr; }
+  .product-showcase{ grid-template-columns:1fr; }
+  .screen-gallery{ grid-template-columns:repeat(6,180px); }
   .toc{ position:static; margin-bottom:36px; }
 }
 @media (max-width: 760px){
