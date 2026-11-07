@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T14:57:52.113424+05:30",
+  "checked_at": "2026-11-07T14:20:00.556293+05:30",
   "leads": [
     {
       "source": "DSSSB",
@@ -15,7 +15,7 @@
     },
     {
       "source": "DSSSB",
-      "url": "https://dsssb.delhi.gov.in/dsssb-vacancies?page=12"
+      "url": "https://dsssb.delhi.gov.in/dsssb-vacancies?page=13"
     },
     {
       "source": "DSSSB",
@@ -139,7 +139,7 @@
     },
     {
       "source": "DSSSB",
-      "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/img20260203_15481444_1.pdf"
+      "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/final_advt_06_2026_j_e_electrical_mts_1.pdf"
     },
     {
       "source": "DSSSB",
@@ -239,7 +239,7 @@
     },
     {
       "source": "DSSSB",
-      "url": "https://dsssb.delhi.gov.in/vacancies?page=12"
+      "url": "https://dsssb.delhi.gov.in/vacancies?page=13"
     },
     {
       "source": "DSSSB",
@@ -299,26 +299,6 @@
     },
     {
       "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1787805689_advertisementofconsultantandyps.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1787805689_annexurei.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788430542_yp-iiadvertismentenglish.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788430542_yp-iiadvertismenthindi.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788430543_applicationformyp-ii.pdf"
-    },
-    {
-      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788754688_recruitmentadopt.pdf"
     },
     {
@@ -336,18 +316,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788776094_advt_assistant_deputation_aug2026.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788776383_yp-i_ii_advert_18082026.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788781378_corrigedumdtd07-09-2026-ypi_ii1.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788781546_advsrconsultantdrsusan.pdf"
     },
     {
       "source": "ICMR",
@@ -452,10 +420,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1790676945_youngprofessional-ibasicsciences-hindipdf.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1790851367_corrigendumdated30-09-2026yp-iii.pdf"
     },
     {
       "source": "ICMR",
@@ -594,10 +558,6 @@
       "url": "https://www.indiapost.gov.in/vacancies/recruitments"
     },
     {
-      "source": "RBI",
-      "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
-    },
-    {
       "source": "UPPSC",
       "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\EO.pdf"
     },
@@ -663,12 +623,12 @@
     {
       "source": "IBPS",
       "page": "https://www.ibps.in/",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
+      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
       "page": "https://drdo.gov.in/drdo/en/offerings/vacancies",
-      "error": "<urlopen error timed out>"
+      "error": "<urlopen error [Errno 111] Connection refused>"
     },
     {
       "source": "WAPCOS",
