@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T14:20:00.556293+05:30",
+  "checked_at": "2026-11-08T14:32:43.055543+05:30",
   "leads": [
     {
       "source": "DSSSB",
@@ -558,6 +558,10 @@
       "url": "https://www.indiapost.gov.in/vacancies/recruitments"
     },
     {
+      "source": "RBI",
+      "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
+    },
+    {
       "source": "UPPSC",
       "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\EO.pdf"
     },
@@ -623,7 +627,7 @@
     {
       "source": "IBPS",
       "page": "https://www.ibps.in/",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
