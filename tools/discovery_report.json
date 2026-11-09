@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08T14:32:43.055543+05:30",
+  "checked_at": "2026-11-09T15:21:13.018221+05:30",
   "leads": [
     {
       "source": "DSSSB",
@@ -295,10 +295,6 @@
     },
     {
       "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Events/1793593939_webinar3_2026_medicalmasterclassseries_poster.pdf "
-    },
-    {
-      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788754688_recruitmentadopt.pdf"
     },
     {
@@ -316,6 +312,14 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788776094_advt_assistant_deputation_aug2026.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788776383_yp-i_ii_advert_18082026.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788781378_corrigedumdtd07-09-2026-ypi_ii1.pdf"
     },
     {
       "source": "ICMR",
@@ -423,6 +427,10 @@
     },
     {
       "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1790851367_corrigendumdated30-09-2026yp-iii.pdf"
+    },
+    {
+      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1791182844_engagementofseniorconsultantscientific-non-medicalandconsultantfinance_0001.pdf"
     },
     {
@@ -516,6 +524,14 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1793626822_directorsadvertisement_0001.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1794134886_document.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1794211246_corrigendumassistant.pdf"
     },
     {
       "source": "ICMR",
@@ -627,7 +643,7 @@
     {
       "source": "IBPS",
       "page": "https://www.ibps.in/",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
+      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
