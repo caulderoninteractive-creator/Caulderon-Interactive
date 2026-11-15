@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-14T14:30:44.785502+05:30",
+  "checked_at": "2026-11-15T15:00:18.818548+05:30",
   "leads": [
     {
       "source": "DSSSB",
@@ -263,11 +263,19 @@
     },
     {
       "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
+    },
+    {
+      "source": "IBPS",
       "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf"
     },
     {
       "source": "IBPS",
       "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/PO_SPL_Combined_Window_CRP-XVI.pdf"
     },
     {
       "source": "ICMR",
@@ -574,34 +582,6 @@
       "url": "https://www.icmr.gov.in/reset_search/employment-opportunities"
     },
     {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/CABE_Accessibility_Conformance_Certificate.pdf"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/ordersandnotices"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/recruitmentrules"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/franchise"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/online-gds"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/recruitments"
-    },
-    {
       "source": "RBI",
       "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
     },
@@ -688,62 +668,6 @@
     {
       "source": "TNPSC",
       "url": "https://www.tnpsc.gov.in/static_pdf/halfyearly/hy_identicert1.pdf"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\EO.pdf"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\IO.pdf"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\SI.pdf"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=ac"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=dc"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/CandidatePages/IntLtr/Interview_DetailsShowByAdvertisement_New.aspx"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/FooterPages/Notice"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=1"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=2"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EIM"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EO"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=IO"
-    },
-    {
-      "source": "UPPSC",
-      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=SI"
     }
   ],
   "failures": [
@@ -751,11 +675,6 @@
       "source": "UPSC",
       "page": "https://upsc.gov.in/recruitment/recruitment-advertisements",
       "error": "<urlopen error timed out>"
-    },
-    {
-      "source": "IBPS",
-      "page": "https://www.ibps.in/index.php/careers/",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
@@ -766,6 +685,11 @@
       "source": "WAPCOS",
       "page": "https://www.wapcos.co.in/careers",
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "India Post",
+      "page": "https://www.indiapost.gov.in/vacancies",
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     },
     {
       "source": "SBI",
@@ -791,6 +715,11 @@
       "source": "Bihar PSC",
       "page": "https://bpsc.bihar.gov.in/",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
+    },
+    {
+      "source": "UPPSC",
+      "page": "https://uppsc.up.nic.in/",
+      "error": "HTTP Error 503: Service Unavailable"
     }
   ]
 }
