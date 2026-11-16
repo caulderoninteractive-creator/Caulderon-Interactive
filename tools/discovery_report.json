@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-15T15:00:18.818548+05:30",
+  "checked_at": "2026-11-16T15:18:22.732013+05:30",
   "leads": [
     {
       "source": "DSSSB",
@@ -582,10 +582,6 @@
       "url": "https://www.icmr.gov.in/reset_search/employment-opportunities"
     },
     {
-      "source": "RBI",
-      "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
-    },
-    {
       "source": "TNPSC",
       "url": "https://www.tnpsc.gov.in/Hod/RecruitmentRequisition.aspx"
     },
@@ -668,6 +664,62 @@
     {
       "source": "TNPSC",
       "url": "https://www.tnpsc.gov.in/static_pdf/halfyearly/hy_identicert1.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\EO.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\IO.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\SI.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=ac"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=dc"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/IntLtr/Interview_DetailsShowByAdvertisement_New.aspx"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/FooterPages/Notice"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=1"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=2"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EIM"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EO"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=IO"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=SI"
     }
   ],
   "failures": [
@@ -715,11 +767,6 @@
       "source": "Bihar PSC",
       "page": "https://bpsc.bihar.gov.in/",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
-    },
-    {
-      "source": "UPPSC",
-      "page": "https://uppsc.up.nic.in/",
-      "error": "HTTP Error 503: Service Unavailable"
     }
   ]
 }
