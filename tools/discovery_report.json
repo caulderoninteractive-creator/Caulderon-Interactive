@@ -1,6 +1,50 @@
 {
-  "checked_at": "2026-11-16T15:18:22.732013+05:30",
+  "checked_at": "2026-11-17T16:16:38.469793+05:30",
   "leads": [
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/advertisement/"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/hi/advertisement-2/"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/2025/04/NB-2024-04-29-01.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Corrigendum-72nd-CCE-Reduction-of-2-posts-of-BPS_BPSC-20260903-23e57k.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Corrigendum-Integrated-72nd-CCE-Pre-Advt.-44-vacancies-of-Sugarcane-Officer-deleted_BPSC-20260506-0jupsy.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Important-Notice-04-282025-Advertisement-cancelled_BPSC-20261029-wh9ep8.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Important-Notice-Date-of-012026-Stenographer-BPSC-Exam_BPSC-20260420-zj3eyx.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Kaagaz_20260502_160639877178_BPSC-20260502-zjmn51.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/NB-2025-06-10-01.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/NB-2025-06-26-02_BPSC-20250626-vmnwcx.pdf"
+    },
+    {
+      "source": "Bihar PSC",
+      "url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Regarding_postpone_72nd_BPSC_BPSC-20260720-u768lx.pdf"
+    },
     {
       "source": "DSSSB",
       "url": "https://dsssb.delhi.gov.in/dsssb-vacancies"
@@ -274,10 +318,6 @@
       "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
     },
     {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/wp-content/uploads/PO_SPL_Combined_Window_CRP-XVI.pdf"
-    },
-    {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/employment-opportunities"
     },
@@ -311,10 +351,6 @@
     },
     {
       "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Call/1791972387_carassistivetechcall_v2.pdf"
-    },
-    {
-      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Circular/1792755237_recruitmentofassistantdirectorgeneraladmin-hindipdf.pdf"
     },
     {
@@ -336,14 +372,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788754690_applicationadopt.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788759372_foricmr_website.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1788763557_applicationperformaforsmo1.pdf"
     },
     {
       "source": "ICMR",
@@ -582,6 +610,38 @@
       "url": "https://www.icmr.gov.in/reset_search/employment-opportunities"
     },
     {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/CABE_Accessibility_Conformance_Certificate.pdf"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/ordersandnotices"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/recruitmentrules"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/franchise"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/online-gds"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/recruitments"
+    },
+    {
+      "source": "RBI",
+      "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
+    },
+    {
       "source": "TNPSC",
       "url": "https://www.tnpsc.gov.in/Hod/RecruitmentRequisition.aspx"
     },
@@ -729,6 +789,11 @@
       "error": "<urlopen error timed out>"
     },
     {
+      "source": "IBPS",
+      "page": "https://www.ibps.in/index.php/recruitment",
+      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
+    },
+    {
       "source": "DRDO",
       "page": "https://drdo.gov.in/drdo/en/offerings/vacancies",
       "error": "<urlopen error [Errno 111] Connection refused>"
@@ -737,11 +802,6 @@
       "source": "WAPCOS",
       "page": "https://www.wapcos.co.in/careers",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source": "India Post",
-      "page": "https://www.indiapost.gov.in/vacancies",
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     },
     {
       "source": "SBI",
@@ -762,11 +822,6 @@
       "source": "RRB Chandigarh",
       "page": "https://www.rrbcdg.gov.in/",
       "error": "<urlopen error timed out>"
-    },
-    {
-      "source": "Bihar PSC",
-      "page": "https://bpsc.bihar.gov.in/",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)>"
     }
   ]
 }
