@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-19T15:54:46.966390+05:30",
+  "checked_at": "2026-11-20T15:34:28.062216+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -290,34 +290,6 @@
       "url": "https://dsssb.delhi.gov.in/vacancies?page=2"
     },
     {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/index.php/careers"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/index.php/careers/"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/index.php/recruitment"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/index.php/recruitment/"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
-    },
-    {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/employment-opportunities"
     },
@@ -368,10 +340,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Events/1795065073_flyer_webinar4_medicalmasterclassseries.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789359981_advtxiss.PDF"
     },
     {
       "source": "ICMR",
@@ -603,6 +571,30 @@
     },
     {
       "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795084927_advertisementseniorconsultantpdfhindi.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795089350_appl_format.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795148359_applicationform_english.docx"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795148378_applicationform_hindi.docx"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795166694_finaladvertisement_sci_d.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795167560_advt-yp_19112026v2.pdf"
+    },
+    {
+      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1753860443_saransh20metabrochure.pdf"
     },
     {
@@ -790,7 +782,12 @@
     {
       "source": "UPSC",
       "page": "https://upsc.gov.in/recruitment/recruitment-advertisements",
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "IBPS",
+      "page": "https://www.ibps.in/",
+      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
