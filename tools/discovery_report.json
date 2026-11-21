@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-20T15:34:28.062216+05:30",
+  "checked_at": "2026-11-21T15:23:30.962367+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -288,6 +288,30 @@
     {
       "source": "DSSSB",
       "url": "https://dsssb.delhi.gov.in/vacancies?page=2"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/careers"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/careers/"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/recruitment"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/recruitment/"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
     },
     {
       "source": "ICMR",
@@ -606,34 +630,6 @@
       "url": "https://www.icmr.gov.in/reset_search/employment-opportunities"
     },
     {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/CABE_Accessibility_Conformance_Certificate.pdf"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/ordersandnotices"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/documents/recruitmentrules"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/franchise"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/online-gds"
-    },
-    {
-      "source": "India Post",
-      "url": "https://www.indiapost.gov.in/vacancies/recruitments"
-    },
-    {
       "source": "RBI",
       "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
     },
@@ -785,11 +781,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "IBPS",
-      "page": "https://www.ibps.in/",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
-    },
-    {
       "source": "DRDO",
       "page": "https://drdo.gov.in/drdo/en/offerings/vacancies",
       "error": "<urlopen error [Errno 111] Connection refused>"
@@ -798,6 +789,11 @@
       "source": "WAPCOS",
       "page": "https://www.wapcos.co.in/careers",
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "India Post",
+      "page": "https://www.indiapost.gov.in/vacancies",
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     },
     {
       "source": "SBI",
