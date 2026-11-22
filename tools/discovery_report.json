@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-21T15:23:30.962367+05:30",
+  "checked_at": "2026-11-22T15:19:55.095338+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -304,10 +304,6 @@
     {
       "source": "IBPS",
       "url": "https://www.ibps.in/index.php/recruitment/"
-    },
-    {
-      "source": "IBPS",
-      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
     },
     {
       "source": "IBPS",
@@ -630,6 +626,34 @@
       "url": "https://www.icmr.gov.in/reset_search/employment-opportunities"
     },
     {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/CABE_Accessibility_Conformance_Certificate.pdf"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/ordersandnotices"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/documents/recruitmentrules"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/franchise"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/online-gds"
+    },
+    {
+      "source": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies/recruitments"
+    },
+    {
       "source": "RBI",
       "url": "https://opportunities.rbi.org.in/Scripts/Vacancies.aspx"
     },
@@ -781,6 +805,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "source": "IBPS",
+      "page": "https://www.ibps.in/index.php/careers/",
+      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
+    },
+    {
       "source": "DRDO",
       "page": "https://drdo.gov.in/drdo/en/offerings/vacancies",
       "error": "<urlopen error [Errno 111] Connection refused>"
@@ -789,11 +818,6 @@
       "source": "WAPCOS",
       "page": "https://www.wapcos.co.in/careers",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source": "India Post",
-      "page": "https://www.indiapost.gov.in/vacancies",
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     },
     {
       "source": "SBI",
