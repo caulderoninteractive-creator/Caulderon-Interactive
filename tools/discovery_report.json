@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T15:19:55.095338+05:30",
+  "checked_at": "2026-11-23T16:19:44.882024+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -159,6 +159,10 @@
     },
     {
       "source": "DSSSB",
+      "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/exam_schedule_2.pdf"
+    },
+    {
+      "source": "DSSSB",
       "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/examination_schedule_01_to_20_sep.pdf"
     },
     {
@@ -304,6 +308,10 @@
     {
       "source": "IBPS",
       "url": "https://www.ibps.in/index.php/recruitment/"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
     },
     {
       "source": "IBPS",
@@ -615,6 +623,10 @@
     },
     {
       "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795421004_srconsultant.pdf"
+    },
+    {
+      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1753860443_saransh20metabrochure.pdf"
     },
     {
@@ -806,7 +818,7 @@
     },
     {
       "source": "IBPS",
-      "page": "https://www.ibps.in/index.php/careers/",
+      "page": "https://www.ibps.in/index.php/recruitment",
       "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
