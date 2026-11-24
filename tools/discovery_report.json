@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T16:19:44.882024+05:30",
+  "checked_at": "2026-11-24T18:02:27.433768+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -315,7 +315,15 @@
     },
     {
       "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf"
+    },
+    {
+      "source": "IBPS",
       "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/PO_SPL_Combined_Window_CRP-XVI.pdf"
     },
     {
       "source": "ICMR",
@@ -372,18 +380,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789638401_advertisementconsultantnon-medicalandapplicationform.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789728303_applicatonformassistantdeputation.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789728303_assistantdeputationadvtenglish.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789728304_assistantdeputationadvthindi.pdf"
     },
     {
       "source": "ICMR",
@@ -500,10 +496,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1791978216_notification14-10-2026.PDF"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1792045720_398noticeforextensionoflastdate.pdf"
     },
     {
       "source": "ICMR",
@@ -815,11 +807,6 @@
       "source": "UPSC",
       "page": "https://upsc.gov.in/recruitment/recruitment-advertisements",
       "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "IBPS",
-      "page": "https://www.ibps.in/index.php/recruitment",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
     },
     {
       "source": "DRDO",
