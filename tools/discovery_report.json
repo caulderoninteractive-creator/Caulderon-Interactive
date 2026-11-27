@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-26T16:27:43.607653+05:30",
+  "checked_at": "2026-11-27T16:24:59.829409+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -151,6 +151,10 @@
     },
     {
       "source": "DSSSB",
+      "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/examination_schedule_41_22.pdf"
+    },
+    {
+      "source": "DSSSB",
       "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/final_adv.pdf"
     },
     {
@@ -204,10 +208,6 @@
     {
       "source": "DSSSB",
       "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/notice_1439.pdf"
-    },
-    {
-      "source": "DSSSB",
-      "url": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/notice_driving_1.pdf"
     },
     {
       "source": "DSSSB",
@@ -287,7 +287,7 @@
     },
     {
       "source": "ICMR",
-      "url": "https://www.icmr.gov.in/employment-opportunities?archive=1&page=128"
+      "url": "https://www.icmr.gov.in/employment-opportunities?archive=1&page=129"
     },
     {
       "source": "ICMR",
@@ -327,23 +327,7 @@
     },
     {
       "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Events/1795065073_flyer_webinar4_medicalmasterclassseries.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789638401_advertisementconsultantnon-medicalandapplicationform.pdf"
-    },
-    {
-      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789970226_advconsultantdrpande.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789992278_advertisementforthepositionofconsultantnonmedical-pdf.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789996393_applicationformconsultantnon-medical01post.docx"
     },
     {
       "source": "ICMR",
@@ -579,6 +563,30 @@
     },
     {
       "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795759431_applicationforminhindiandenglish.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795759431_notificationhindienglishforwebsitenov.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795774980_youngprofessional-hindi.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795774999_applicationform.doc"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795775013_advfor18thdecember2026.pdf"
+    },
+    {
+      "source": "ICMR",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795776118_hindi_version.pdf"
+    },
+    {
+      "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1753860443_saransh20metabrochure.pdf"
     },
     {
@@ -708,6 +716,62 @@
     {
       "source": "TNPSC",
       "url": "https://www.tnpsc.gov.in/static_pdf/halfyearly/hy_identicert1.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\EO.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\IO.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CMS\\Recruitment\\SI.pdf"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=ac"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/Advertismentwise_DownloadDocument.aspx?inptprmtr=dc"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/CandidatePages/IntLtr/Interview_DetailsShowByAdvertisement_New.aspx"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/FooterPages/Notice"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=1"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/OuterPages/DisplayOnlineNotice.aspx?ID=2"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EI"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EIM"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=EO"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=IO"
+    },
+    {
+      "source": "UPPSC",
+      "url": "https://uppsc.up.nic.in/PublicPages/Recruitment_Details.aspx?ID=SI"
     }
   ],
   "failures": [
@@ -750,11 +814,6 @@
       "source": "RRB Chandigarh",
       "page": "https://www.rrbcdg.gov.in/",
       "error": "<urlopen error timed out>"
-    },
-    {
-      "source": "UPPSC",
-      "page": "https://uppsc.up.nic.in/",
-      "error": "HTTP Error 503: Service Unavailable"
     }
   ]
 }
