@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27T16:24:59.829409+05:30",
+  "checked_at": "2026-11-28T16:00:29.776467+05:30",
   "leads": [
     {
       "source": "Bihar PSC",
@@ -278,6 +278,34 @@
       "url": "https://dsssb.delhi.gov.in/vacancies?page=2"
     },
     {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/careers"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/careers/"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/recruitment"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/index.php/recruitment/"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Advertisement-for-Server-Administrator-Programming-Assistant-and-Assistant-Oct._Nov.-2026.pdf"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
+    },
+    {
+      "source": "IBPS",
+      "url": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XVI.pdf"
+    },
+    {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/employment-opportunities"
     },
@@ -324,10 +352,6 @@
     {
       "source": "ICMR",
       "url": "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf"
-    },
-    {
-      "source": "ICMR",
-      "url": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1789970226_advconsultantdrpande.pdf"
     },
     {
       "source": "ICMR",
@@ -781,11 +805,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "IBPS",
-      "page": "https://www.ibps.in/",
-      "error": "<urlopen error [SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)>"
-    },
-    {
       "source": "DRDO",
       "page": "https://drdo.gov.in/drdo/en/offerings/vacancies",
       "error": "<urlopen error [Errno 111] Connection refused>"
@@ -808,7 +827,7 @@
     {
       "source": "KVS",
       "page": "https://kvsangathan.nic.in/en/recruitment/",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)>"
+      "error": "source redirected off its official host"
     },
     {
       "source": "RRB Chandigarh",
